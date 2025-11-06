@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Elementos de Citação</title>
+</head>
+<body>
+    
+    <h1>HTML Elementos de Citação</h1>
+
+    <p>Nesse capítulo abordaremos o <span class="tag"><</span><span class="tag">q></span>,<span class="tag"><</span><span class="tag">blockquote></span>,<span class="tag"><</span><span class="tag">abbr></span>,<span class="tag"><</span><span class="tag">address></span>,<span class="tag"><</span><span class="tag">cite></span>,<span class="tag"><</span><span class="tag">bdo></span> e o <span class="tag"><</span><span class="tag">dfn></span>.</p></p>
+
+    <div class="exemplo">
+
+        <h3>Exemplo</h3>
+
+        <div>
+            
+            <p>Aqui está uma Citação do site WWF</p>
+            
+            <div>
+                <p>Durante 60 anos, o WWF trabalhou para ajudar as pessoas e a natureza a prosperar. Como principal organização conservacionista do mundo, o WWF trabalha em quase 100 países. Em todos os níveis, colaboramos com pessoas ao redor do mundo para desenvolver e fornecer soluções inovadoras que protejam comunidades, a vida selvagem e os lugares em que vivem.</p>
+            </div>
+        </div>
+    </div>
+
+    <h2>HTML <span class="tag"><</span><span class="tag">blockquote> para Citações</h2>
+
+    <p>O elemento HTML <span class="tag"><</span><span class="tag">blockquote></span> define uma seção que é citada de outra fonte.</p>
+    <p>O conteúdo dentro do elemento <span class="tag"><</span><span class="tag">blockquote></span> é geralmente exibido como um bloco separado, e o navegador geralmente adiciona uma indentação (margem) antes e depois do bloco.
+
+    <div class="exemplo">
+        <h3>Exemplo</h3>
+
+        <div>
+            <p><span class="tag"><</span><span class="tag">blockquote></span>Durante 60 anos, o WWF trabalhou para ajudar as pessoas e a natureza a prosperar. Como principal organização conservacionista do mundo, o WWF trabalha em quase 100 países. Em todos os níveis, colaboramos com pessoas ao redor do mundo para desenvolver e fornecer soluções inovadoras que protejam comunidades, a vida selvagem e os lugares em que vivem.<span class="tag"><</span><span class="tag">/blockquote></span></p>
+        </div>
+
+    </div>
+
+    <h2>HTML <span class="tag"><</span><span class="tag">q></span> para citações curtas </h2>
+
+    <p>O elemento HTML <span class="tag"><</span><span class="tag">q></span> define uma citação curta.</p>
+    <p>Os navegadores geralmente exibem o conteúdo do elemento <span class="tag"><</span><span class="tag">q></span> entre aspas.</p></p>
+
+    <div>
+        <h3>Exemplo</h3>
+
+        <div>
+            <p>Ele disse <span class="tag"><</span><span class="tag">q></span>O tempo é dinheiro<span class="tag"><</span><span class="tag">/q></span> e saiu.</p>
+        </div>
+    </div>
+
+    <p>Saída</p>
+
+    <p>Ele disse "O tempo é dinheiro" e saiu.</p>
+
+    <h2>HTML <span class="tag"><</span><span class="tag">abbr></span> para abreviações e acrônimos</h2>
+
+    <p>O elemento HTML <span class="tag"><</span><span class="tag">abbr></span> define uma abreviação ou acrônimo, como "HTML", "CSS", "Mr.", "Dr.", "ASAP", etc.</p>
+    <p>Marcar abreviações pode fornecer informações úteis para navegadores, mecanismos de pesquisa e outras tecnologias, como leitores de tela.</p>
+
+    <p><b>Dica:</b> Use o atributo <span class="atributo">title</span> para fornecer o significado completo da abreviação ou acrônimo.</p>
+
+    <div>
+        <h3>Exemplo</h3>
+
+        <div>
+            <p>O <span class="tag"><</span><span class="tag">abbr </span><span class="atributo">title="World Health Organization"></span>WHO<span class="tag"><</span><span class="tag">/abbr></span> foi fundado em 1948.</p>
+    </div>
+
+    <p>Saída</p>
+
+    <p>O <WHO title="World Health Organization">WHO</abbr> foi fundado em 1948.</p>
+
+    <p><b>Ponto</b>Use o atributo <span class="atributo">title</span> para fornecer o significado completo da abreviação ou acrônimo.</p>
+
+    <h2>HTML <span class="tag"><</span><span class="tag">address></span> para informações de contato </h2>
+
+    <p>A tag HTML <span class="tag"><</span><span class="tag">address></span> define informações de contato para o autor/ proprietário de um documento ou artigo.</p>
+    <p>As informações de contato podem incluir um endereço físico, um endereço de e-mail, um número de telefone, um URL, etc.</p>
+    <p>O conteúdo dentro do elemento <span class="tag"><</span><span class="tag">address></span> é geralmente exibido em itálico pelo navegador.</p>
+    <p>Sempre adicione uma quebra de linha (<span class="tag"><</span><span class="tag">br></span>) entre cada item de informação.</p>
+    
+    <div class="exemplo">
+
+        <h3>Exemplo</h3>
+
+        <div>
+            <p><span class="tag"><</span><span class="tag">address></span><br>Written by John Doe.<br>Visit us at:<br>Example.com<br>Box 564, Disneyland<br>USA<span class="tag"><</span><span class="tag">address></span></p>
+        </div>
+    </div>
+
+    <h2>HTML <span class="tag"><</span><span class="tag">cite></span> para títulos do trabalho</h2>
+
+    <p>A tag HTML <span class="tag"><</span><span class="tag">cite></span> define o título de um trabalho, como um livro, um poema, um artigo, etc.</p>
+    <p><b>Nota:</b>O nome do autor não deve ser incluído no elemento <span class="tag"><</span><span class="tag">cite></span>, a menos que o nome do autor faça parte do título do trabalho.</p>
+    <p>O conteúdo dentro do elemento <span class="tag"><</span><span class="tag">cite></span> é geralmente exibido em itálico pelo navegador.</p>
+
+    <div class="exemplo">
+
+        <h3>Exemplo</h3>
+
+        <div>
+
+            <p>Meu livro favorito é <span class="tag"><</span><span class="tag">cite></span>The Scream<span class="tag"><</span><span class="tag">/cite></span> de Edvard Munch.</p>
+
+        </div>
+
+    </div>
+
+    <h2>HTML <span class="tag"><</span><span class="tag">bdo></span> para substituir a direção do texto</h2>
+
+    <p>O elemento HTML <span class="tag"><</span><span class="tag">bdo></span> (bidirectional override) substitui a direção do texto padrão.</p>
+    <p>O atributo HTML <span class="atributo">dir</span> especifica a direção do texto.</p>
+    <p>O atributo <span class="atributo">dir</span> pode ter dois valores:</p>
+    <ul>
+        <li><b>ltr</b>: da esquerda para a direita (padrão)</li>
+        <li><b>rtl</b>: da direita para a esquerda</li>
+    </ul>
+
+    <p>Saída</p>
+
+    <div class="exemplo">
+
+        <h3>Exemplo</h3>
+
+        <div>
+            <p><span class="tag"><</span><span class="tag">bdo </span><span class="atributo">dir="rtl"></span>Este texto é exibido da <bdo dir="rtl">direita para a esquerda.</bdo><span class="tag"><</span><span class="tag">/bdo></span></p>
+        </div>
+    </div>
+
+    <a href="comentarios-html.html">Comentários HTML</a>
+
+</body>
+</html>

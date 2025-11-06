@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cores RGB e RGBA</title>
+</head>
+<body>
+    
+    <h1>Cores HTML - RGB e RGBA</h1>
+
+    <p>Um valor de cor RGB representa a luz VERMELHA, VERDE e AZUL Fontes.</p>
+    p>Um valor de cor RGBA é o mesmo que RGB, mas com um canal alfa - que especifica a opacidade da cor.</p>
+
+    <h2>Valores de Cor RGB</h2>
+
+    <p>Um valor de cor RGB é especificado com a função <b>rgb()</b>, que aceita três valores inteiros entre 0 e 255, representando a intensidade das cores VERMELHA, VERDE e AZUL.</p>
+    <p>isso significa que existem 256 tons de cada cor, e mais de 16 milhões de combinações possíveis.</p>
+
+    <p>para exibir a cor verde, você usaria o seguinte código:
+    </p>
+    <p><span style="background-color: rgb(0, 255, 0);">Cor de fundo verde (RGB rgb(0, 255, 0)</span>
+    </p>
+    <p>para exibir a cor vermelha, você usaria o seguinte código:
+    </p>
+    <p><span style="background-color: rgb(255, 0, 0);">Cor de fundo vermelha (RGB rgb(255, 0, 0)</span>
+    </p>
+    <p>para exibir a cor azul, você usaria o seguinte código: 
+    </p>
+    <p><span style="background-color: rgb(0, 0, 255);">Cor de fundo azul (RGB rgb(0, 0, 255)</span>
+    </p>
+    <p>para exibir a cor preto, você usaria o seguinte código:
+    </p>
+    <p><span style="background-color: rgb(0, 0, 0); color: white;">Cor de fundo preto (RGB rgb(0, 0, 0)</span>
+    </p>
+    <p>para exibir a cor branco, você usaria o seguinte código:    
+    </p>
+    <p><span style="background-color: rgb(255, 255, 255);">Cor de fundo branco (RGB rgb(255, 255, 255)</span></p>
+
+    <h2>Tons de cinza</h2>
+
+    <p>Os tons de cinza são criados quando os valores de vermelho, verde e azul são iguais. Por exemplo, rgb(0, 0, 0) é preto, rgb(255, 255, 255) é branco e rgb(128, 128, 128) é cinza médio.</p>
+
+    <div class="exemplo">
+
+        <p style="background-color: rgb(50,  50, 50); color: white"><span class="tag"><</span><span class="tag">p </span><span class="atributo">style</span><span class="valor">="background-color: rgb(50, 50, 50); color: white;"</span>Cor de fundo cinza(RGB rgb(50, 50, 60)</p>
+        <p style="background-color: rgb(100, 100, 100); color:white"><span class="tag"><</span><span class="tag">p </span><span class="atributo">style</span><span class="valor">="background-color: rgb(100, 100, 100); color: white"</span>Cor de fundo cinza(RGB rgb(100, 100, 100)</p>
+        <p style="background-color: rgb(128, 128, 128); color:white"><span class="tag"><</span><span class="tag">p </span><span class="atributo">style</span><span class="valor">="background-color: rgb(128, 128, 128); color: white color: white;"</span>Cor de fundo cinza médio (RGB rgb(128, 128, 128)</p>
+
+    </div>
+
+    <h2>Valores de Cor RGBA</h2>
+
+    <p>Os valores de cor RGBA são uma extensão dos valores de cor RGB com um canal alfa - que especifica a opacidade de uma cor.</p>
+    <p>Um valor de cor RGBA é especificado com:</p>
+    <p>
+        <b>rgba(red, green, blue, alpha)</b>
+    </p>
+    <p>onde o valor alfa é um número entre 0.0 (totalmente transparente) e 1.0 (totalmente opaco).</p>
+
+    <div class="exemplo">
+
+        <p style="background-color: rgba(0, 255, 0, 0.5);"><span class="tag"><</span><span class="tag">p </span><span class="atributo">style</span><span class="valor">="background-color: rgba(0, 255, 0, 0.5);"</span>Cor de fundo verde (RGBA rgba(0, 255, 0, 0.5)</p>
+        <p style="background-color: rgba(255, 0, 0, 0.5);"><span class="tag"><</span><span class="tag">p </span><span class="atributo">style</span><span class="valor">="background-color: rgba(255, 0, 0, 0.5);"</span>Cor de fundo vermelho (RGBA rgba(255, 0, 0, 0.5)</p>
+        <p style="background-color: rgba(0, 0, 255, 0.5);"><span class="tag"><</span><span class="tag">p </span><span class="atributo">style</span><span class="valor">="background-color: rgba(0, 0, 255, 0.5);"</span>Cor de fundo azul (RGBA rgba(0, 0, 255, 0.5)</p>
+        <p style="background-color: rgba(0, 0, 0, 0.5); color: white;"><span class="tag"><</span><span class="tag">p </span><span class="atributo">style</span><span class="valor">="background-color: rgba(0, 0, 0, 0.5); color: white;"</span>Cor de fundo preto (RGBA rgba(0, 0, 0, 0.5)</p>
+        <p style="background-color: rgba(255, 255, 255, 0.5);"><span class="tag"><</span><span class="tag">p </span><span class="atributo">style</span><span class="valor">"background-color: rgba(255, 255, 255, 0.5);"</span>Cor de fundo branco (RGBA rgba(255, 255, 255, 0.5)</p>
+    
+    </div>
+
+    <a href="cores-html-hex.html">Cores HTML Hexadecimais</a>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cores do link</title>
+    </head>
+
+    <body>
+        
+        <h1>Links HTML - Cores Diferentes</h1>
+
+        <p>Um link HTML é exibido em uma cor diferente, dependendo se foi visitado, não foi, ou está ativo.</p>
+
+        <h2>Cores do link HTML</h2>
+
+        <p>Por por padrão, um link aparecerá assim (em todos os navegadores):</p>
+
+        <ul>
+
+            <li>Um link não visitado está sublinhado e azul</li>
+            <li>Um link visitado está sublinhado e roxo</li>
+            <li>Um link ativo está sublinhado e vermelho</li>
+        
+        </ul>
+
+        <p>Você pode alterar as cores do estado do link usando CSS:</p>
+
+        <div class="exemplo">
+
+            <h3>Exemplo</h3>
+
+            <p>Aqui, um link não visitado ficará preto sem sublinhado. Um link visitado será roxo sem sublinhado. Um link ativo será amarelo e sublinhado. Além disso, ao passar o mouse sobre um link (a:hover), ele ficará vermelho e sublinhado:</p>
+
+            <div>
+
+                <p class="tag">&lt;style&gt;</p>
+                <p class="seletor">a:link {</p>
+                    <p class="propriedade">color: <span class="valor">black;</span></p>
+                    <p class="propriedade">text-decoration: <span class="valor">none;</span></p>
+                <p class="seletor">}</p><br>
+                <p class="seletor">a:visited {</p>
+                    <p class="propriedade">color: <span class="valor">purple;</span></p>
+                    <p class="propriedade">text-decoration: <span class="valor">none;</span></p>
+                <p class="seletor">}</p><br>
+                <p class="seletor">a:hover {</p>
+                    <p class="propriedade">color: <span class="valor">red;</span></p>
+                    <p class="propriedade">text-decoration: <span class="valor">underline;</span></p>
+                <p class="seletor">}</p><br>
+                <p class="seletor">a:active {</p>
+                    <p class="propriedade">color: <span class="valor">yellow;</span></p>
+                    <p class="propriedade">text-decoration: <span class="valor">underline;</span></p>
+                <p class="seletor">}</p>
+                <p class="tag">&lt;/style&gt;</p>
+
+            </div>
+            <div>
+                <style>
+                    a:link {
+                        color: black;
+                        text-decoration: none;
+                    }
+
+                    a:visited {
+                        color: purple;
+                        text-decoration: none;
+                    }
+
+                    a:hover {
+                        color: red;
+                        text-decoration: underline;
+                    }
+
+                    a:active {
+                        color: yellow;
+                        text-decoration: underline;
+                    }
+                </style>
+
+                <p><a href="https://www.w3schools.com/" target="_blank">Visite W3Schools.com!</a></p>
+            </div>
+
+        </div>
+
+        <h2>Botões de link</h2>
+
+        <p>Um link também pode ser estilizado como um botão, usando CSS:</p>
+        <button>Este é um link</button>
+
+        <div>
+
+            <h3>Exemplo</h3>
+
+            <p>Aqui está um exemplo de um link estilizado como um botão:</p>
+
+            <div>
+
+                <p class="tag">&lt;style&gt;</p>
+                <p class="seletor">a {</p>
+                    <p class="propriedade">background-color: <span class="valor">#4CAF50;</span> <span class="comentario">/* Verde */</span></p>
+                    <p class="propriedade">border: <span class="valor">none;</span></p>
+                    <p class="propriedade">color: <span class="valor">white;</span></p>
+                    <p class="propriedade">padding: <span class="valor">15px 32px;</span></p>
+                    <p class="propriedade">text-align: <span class="valor">center;</span></p>
+                    <p class="propriedade">text-decoration: <span class="valor">none;</span></p>
+                    <p class="propriedade">display: <span class="valor">inline-block;</span></p>
+                    <p class="propriedade">font-size: <span class="valor">16px;</span></p>
+                    <p class="propriedade">margin: <span class="valor">4px 2px;</span></p>
+                    <p class="propriedade">cursor: <span class="valor">pointer;</span></p>
+                    <p class="propriedade">border-radius: <span class="valor">8px;</span></p>
+                <p class="seletor">}</p>
+                <p class="tag">&lt;/style&gt;</p>
+
+        </div>
+        <div>
+            <style>
+                a {
+                    background-color: #4CAF50; /* Verde */
+                    border: none;
+                    color: white;
+                    padding: 15px 32px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 16px;
+                    margin: 4px 2px;
+                    cursor: pointer;
+                    border-radius: 8px;
+                }
+            </style>
+
+            <p><a href="https://www.w3schools.com/" target="_blank">Visite W3Schools.com!</a></p>
+        </div>
+
+        <div>
+
+            <a id="s" href="links-html-criar-marcadores.html">Links HTML - Criar Marcadores</a>
+        
+            <style>
+
+                #s{
+                    color: blue;
+                    text-decoration: underline;
+                } 
+                #s:visited {
+                    color: purple;
+                    text-decoration: underline;
+                }
+                #s:active {
+                    color: red;
+                    text-decoration: underline;
+                }
+
+            </style>
+
+        </div>
+        
+    </body>
+
+</html>

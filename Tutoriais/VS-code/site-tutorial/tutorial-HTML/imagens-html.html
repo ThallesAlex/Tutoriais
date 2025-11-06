@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Imagens HTML</title>
+
+    </head>
+
+    <body>
+        
+        <h1>Imagens HTML</h1>
+
+        <p>As imagens podem melhorar o design e a aparência de uma página da web.</p>
+
+        <div class="exemplo">
+
+            <h3>Exemplo</h3>
+
+            <p><span class="tag">&lt;img </span><span class="atributo">src</span><span class="valor">="/VS-code/HTML/imagens.html/O penitente.jpeg" <span class="atributo">alt</span><span class="valor">="penitente silencioso"></span></span></p>
+            <img src="/VS-code/HTML/imagens.html/O penitente.jpeg" width="100px">
+        
+        </div>
+
+        <div class="exemplo">
+
+            <p><span class="tag">&lt;img </span><span class="atributo">src</span><span class="valor">="/VS-code/HTML/imagens.html/purple swirling star wallpaper.jpg" <span class="atributo">alt</span><span class="valor">"purple swirling star wallpaper"></span></span></p>
+            <img src="/VS-code/HTML/imagens.html/purple swirling star wallpaper.jpg" alt="purple swirling star wallpaper.jpg" width="100px">
+
+        </div>
+        <h1>Sintaxe de imagens HTML</h1>
+
+        <p>A tag HTML <span class="tag">&lt;img></span> é usada para incorporar uma imagem em uma página da web.</p>
+        <p>As imagens não são tecnicamente inseridas em uma página da web; As imagens estão vinculadas à páginas web. A tag <span class="tag">&lt;img></span> cria uma retenção espaço para a imagem referênciada.</p>
+        <p>A tag <span class="tag">&lt;img> </span>está vazia, contém apenas atributos e não tem tag de fechamento. </p>
+        <p>A tag <span class="tag">&lt;img> </span> tem dois atributos: </p>
+
+        <ul>
+
+            <li><b>src</b> - Especifica o caminho para a imagem</li>
+            <li><b>alt</b> - Especifica um caminho altenativo para o imagem</li>
+
+        </ul>
+
+        <div>
+
+            <h2>Sintaxe</h2>
+
+            <p><span class="tag">&lt;img </span><span class="atributo">src</span><span class="valor">="url"</span> <span class="atributo">alt</span><span class="valor">"texto alternativo"></span></p>
+
+        </div>
+
+        <h2>O atributo src</h2>
+
+        <p>O atributo <span class="atributo">src</span> especifica o caminho (URL) para a imagem que você deseja exibir.</p>
+        <p><b>Nota:</b> O caminho da imagem é obrigatório. Sem ele, a tag <span class="tag">&lt;img></span> não exibirá nada.</p> 
+        <p>O caminho da imagem pode ser um URL absoluto ou um URL relativo:</p>
+        <ul>
+
+            <li><b>URL absoluto</b> - Um URL completo para uma imagem (inclui o protocolo, como http: // ou https: //)</li>
+            <li><b>URL relativo</b> - O caminho para uma imagem em relação à página da web atual</li>
+        </ul>
+
+        <p><b>Nota:</b> Quando uma página da web é carregada, o navegador faz uma solicitação para o servidor para obter a imagem especificada no atributo <span class="atributo">src</span>. Se a imagem não puder ser encontrada, o navegador exibirá uma imagem de substituição ou um espaço em branco.Os visitantes receberão um ícone de imagem quebrada.</p>
+
+        <p>Tipo isso:</p>
+
+        <img src="VS-code/HTML/imagens.html/purple swirling star wallpaper.jpg" alt="Há uma imagem aqui">
+
+        <h2>O atributo alt</h2>
+
+        <p>O atributo requerido <span class="atributo">alt </span> fornece um texto alternativo para a imagem, se o usuário por algum motivo não puder visualizar a imagem(devido a uma conexão lenta, um erro no src ou se o usuário usa um leitor de tela).</p>
+        <p>O que estiver dentro do <span class="atributo">alt</span> deve descrever a imagem:</p>
+
+        <div class="exemplo">
+
+            <h3>Exemplo</h3>
+
+            <p><span class="tag">&lt;img </span><span class="atributo">src</span><span class="valor">="/VS-code/HTML/imagens.html/8d72c184-d311-4436-ad64-28a126b36e98.jpeg"</span><span class="atributo"> alt</span><span class="valor">Guerreiro com sua espada em uma caverna</span></p>
+            <img src="/VS-code/HTML/imagens.html/8d72c184-d311-4436-ad64-28a126b36e98.jpeg" alt="Guerreiro com sua espada em uma caverna" width="200px">
+
+        </div>
+
+        <p>Se o navegador não conseguir encontrar uma imagem, ele exibirá o valor do atributo <span class="atributo">alt</span>:</p>
+
+        <div class="exemplo">
+
+            <h3>Exemplo</h3>
+
+            <p><span class="tag">&lt;img </span><span class="atributo">src</span><span class="valor">="eu sei lá"</span> <span class="atributo">alt</span><span class="valor">="Guerreiro com sua espada em uma caverna"></span></p>
+            <p>Tipo assim ó</p>
+
+            <img src="eu sei lá" alt="Guerreiro com sua espada em uma caverna">
+
+        </div>
+
+        <h2>Tamanho da imagem - Largura e Altura</h2>
+
+        <p>Você pode usar o atributo <span class="atributo">style </span>para especificar a largura e altura de uma imagem</p>
+    
+        <div class="exemplo">
+
+            <h3>Exemplo</h3>
+
+            <p><span class="tag">&lt;img </span> <span class="atributo">src</span><span class="valor">="sei lá"</span> <span class="atributo"> alt</span><span class="valor">="Guerreiro com sua espada em uma caverna"</span> <span class="atributo">style</span><span class="valor">="width: 500px; height: 600px;"></span></p>
+
+        </div>
+        
+        <p>Como alternativa, você pode usar os atributos <span class="atributo">width </span>e <span class="atributo">height</span>:</p>
+
+        <div class="exemplo">
+
+            <h3>Exemplo</h3>
+
+            <p><span class="tag">&lt;img </span><span class="atributo">src</span><span class="valor">="sei lá.jpg"</span> <span class="atributo">alt</span><span class="valor">="uma imagem qualquer" </span><span class="atributo">width</span><span class="valor">="500px"</span><span class="atributo"> height</span><span class="valor">="600px"</span></p>
+        
+        </div>
+
+        <p>Os atributos <span class="atributo">width</span> e <span class="atributo">height</span> sempre definem a largura e a altura da imagem em pixels.</p>
+
+        <p><b>Nota:</b> Sempre especifique a largura e a altura de uma imagem. Se a largura e a altura não forem definidas, a página web pode piscar enquanto a imagem é carregada.</p>
+
+        <h2>Largura e Altura, ou Estilo? </h2>
+
+        <p>Os atributos <span class="atributo">width </span>,<span class="atributo">height</span> e <span class="atributo">style,</span> são todos válidos em HTML</p>
+        <p>O atributo <span class="atributo">style</span> tem a vantagem de poder definir a largura e a altura em unidades diferentes (%, em, rem, etc.) e pode definir outras propriedades CSS, como bordas, margens e sombras.</p>
+        <p>O atributo <span class="atributo">width</span> e <span class="atributo">height</span> são mais fáceis de usar e entender, mas só podem definir a largura e a altura em pixels.</p>
+
+        <h2>Imagens em outra pasta</h2>
+
+        <p>Se você tiver suas imagens em uma subpasta, deverá incluir a pasta no caminho da imagem:</p>
+
+        <div class="exemplo">
+
+            <h3>Exemplo</h3>
+
+            <p><span class="tag">&lt;img </span><span class="atributo">src</span><span class="valor">="imagens/purple swirling star wallpaper.jpg"</span> <span class="atributo">alt</span><span class="valor">"purple swirling star wallpaper"></span></p>
+            <img src="imagens/purple swirling star wallpaper.jpg" alt="purple swirling star wallpaper" width="100px">
+
+        </div>
+
+        <h2>Imagens em outro servidor/site</h2>
+
+        <p>Alguns sites apontam para para uma imagem em outro servidor.</p>
+        <p>Para fazer isso, você deve usar o URL absoluto da imagem:</p>
+
+        <div class="exemplo">
+
+            <h3>Exemplo</h3>
+
+            <p><span class="tag">&lt;img </span><span class="atributo">src</span><span class="valor">="https://pixabay.com/pt/photos/neuschwanstein-castelo-bav%C3%A1ria-701732/"</span> <span class="atributo">alt</span><span class="valor">"Castelo da Baviera"</span></p>
+            <img src="https://pixabay.com/pt/photos/neuschwanstein-castelo-bav%C3%A1ria-701732/" alt="Castelo da Baviera" width="100px">
+        
+        </div>
+
+        <p><b>Nota sobre imagens externas:</b> As imagens exeternas podem estar em direitos autorais. Se você não obtiver permissão para usá-la, poderá estar violando leis de direitos autorais. Além disso, você não pode controlar imagens externas; elas podem de repente ser removidas ou alteradas</p>
+
+        <h2>Imagens em movimento</h2>
+
+        <p>As imagens em movimento podem ser criadas usando o elemento <span class="tag">&lt;img&gt;</span> com um arquivo de imagem em movimento (GIF) como fonte:</p>
+
+        <div class="exemplo">
+
+            <h3>Exemplo</h3>
+
+            <p><span class="tag">&lt;img </span><span class="atributo">src</span><span class="valor">="/VS-code/HTML/imagens.html/gifs/SFnN.gif"</span> <span class="atributo">alt</span><span class="valor">"personagem dos simpsons indo de um lado pro outro"></span></p>
+            <img src="/VS-code/HTML/imagens.html/gifs/SFnN.gif" alt="personagem dos simpsons indo de u lado pro outro" width="100px">
+        </div>
+
+        <h2>Imagem como link</h2>
+
+        <p>Você pode usar uma imagem como um link, envolvendo a tag <span class="tag">&lt;img></span> com a tag <span class="tag">&lt;a></span>:</p>
+
+        <div class="exemplo">
+
+            <h3>Exemplo</h3>
+
+            <p><span class="tag">&lt;a </span><span class="atributo">href</span><span class="valor">="https://br.pinterest.com/pin/139682025938414357/"</span><span class="tag">&gt;</span><span class="tag">&lt;img </span><span class="atributo">src</span><span class="valor">="/VS-code/HTML/imagens.html/lírio aranha roxo, vermelho e azul.jpg"</span> <span class="atributo">alt</span><span class="valor">""</span><span class="tag">&gt;</span><span class="tag">&lt;/a&gt;</span></p>
+            <a href="https://br.pinterest.com/pin/139682025938414357/"><img src="/VS-code/HTML/imagens.html/lírio aranha roxo, vermelho e azul.jpg" alt="" width="100px"></a>
+    
+        </div>
+
+        <h2>Imagem flutuante</h2>
+
+        <p>Você pode usar o atributo <span class="atributo">style</span> para fazer uma imagem flutuar à esquerda ou à direita do texto:</p>
+
+        <div class="exemplo">
+
+            <h3>Exemplo</h3>
+
+            <p><span class="tag">&lt;img </span><span class="atributo">src</span><span class="valor">="/VS-code/HTML/imagens.html/purple swirling star wallpaper.jpg"</span> <span class="atributo">alt</span><span class="valor">="purple swirling star wallpaper" </span><span class="atributo">style</span><span class="valor">="float: right; width: 100px;"</span></p>
+            <img src="/VS-code/HTML/imagens.html/purple swirling star wallpaper.jpg" alt="purple swirling star wallpaper" style="float: right; width: 100px;">
+            <p>O atributo <span class="atributo">style</span> neste exemplo faz a imagem flutuar à direita do texto.</p>
+    
+        </div>
+
+        <h2>Formatos de imagens comuns</h2>
+
+        <ul>
+
+            <li><b>JPEG</b> - O formato de imagem mais comum. Suporta milhões de cores. Ideal para fotografias e imagens com muitos detalhes. Não suporta transparência.</li>
+            <li><b>PNG</b> - Suporta milhões de cores. Ideal para imagens com áreas transparentes, como logotipos. Suporta transparência.</li>
+            <li><b>GIF</b> - Suporta apenas 256 cores. Ideal para imagens simples, como gráficos e logotipos. Suporta transparência e animação.</li>
+            <li><b>SVG</b> - Formato de imagem vetorial. Ideal para logotipos e ícones que precisam ser redimensionados sem perder qualidade. Suporta transparência.</li>
+            <li><b>WebP</b> - Formato de imagem moderno que oferece melhor compressão e qualidade em comparação com JPEG e PNG. Suporta transparência e animação.</li>
+        
+        </ul>
+
+        <p><b>Nota:</b> Nem todos os navegadores suportam todos os formatos de imagem. JPEG, PNG e GIF são amplamente suportados. SVG e WebP são suportados pelos navegadores modernos, mas podem não ser suportados por navegadores mais antigos </p>
+
+        <h2>Resumo do Capítulo</h2>
+
+        <ul>
+
+            <li>Use a tag <span class="tag">&lt;img></span> para incorporar uma imagem em uma página da web.</li>
+            <li>Use o atributo <span class="atributo">src</span> para especificar o caminho para a imagem.</li>
+            <li>Use o atributo <span class="atributo">alt</span> para fornecer um texto alternativo para a imagem.</li>
+            <li>Você pode usar os atributos <span class="atributo">width</span> e <span class="atributo">height</span> ou o atributo <span class="atributo">style</span> para definir o tamanho da imagem.</li>
+            <li>Você pode usar uma imagem como um link, envolvendo a tag <span class="tag">&lt;img></span> com a tag <span class="tag">&lt;a></span>.</li>
+            <li>Você pode fazer uma imagem flutuar à esquerda ou à direita do texto usando o atributo <span class="atributo">style</span>.</li>
+            <li>Os formatos de imagem mais comuns são JPEG, PNG, GIF, SVG e WebP.</li>
+        
+        </ul>
+
+        <a href="mapas-de-imagens.html">Mapas de Imagens</a>
+
+    </body>
+
+</html>
