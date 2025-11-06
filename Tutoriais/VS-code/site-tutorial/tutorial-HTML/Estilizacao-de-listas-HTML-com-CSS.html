@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="/css-do-tutorial.css">
-    <link rel="shortcut icon" href="/imagens do tutorial/ico/favicon cruz.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css-do-tutorial.css">
+    <link rel="shortcut icon" href="../imagens do tutorial/ico/favicon cruz.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Como Estilizar Listas Usando CSS</title>
@@ -161,7 +161,29 @@
     </ul>
     <hr>
     <h2>Dicas de acessibilidade práticas</h2>
-    ul>li{<b>Menus e listas de navegação:</b> sempre use <span class="tag">&lt;nav&gt;</span> para envolver listas de links principais.}li{<b>Formulários:</b> rótulos  claros nos campos e listas auxiliares para instruções}
-    
+    <ul>
+        <li><b>Menus e listas de navegação:</b> sempre use <span class="tag">&lt;nav&gt;</span> para envolver listas de links principais.</li>
+        <li><b>Formulários:</b> rótulos  claros nos campos e listas auxiliares para instruções (ex: <span class="tag">&lt;ul&gt;</span> com instruções de preenchimento).</li>
+        <li><b>Textos alternativos:</b> se usar imagens como marcadores, cetifique-se de não remover a informação de contexto do marcador para leitores de tela.</li>
+        <li><b>Contraste e legibilidade:</b> ao estilizar listas, mantenha um alto contraste e legibilidade dos itens, especialmente para usuários com deficiência visual.</li>
+    </ul>
+    <hr>
+    <h2>Boas Práticas de Semântica e Organização</h2>
+    <b>Importância do HTML semântico</b>
+    <p>HTML semântico melhora:</p>
+    <ul>
+        <li><b>Experiência do usuário:</b> páginas bem estruturadas são mais fáceis de navegar e entender, especialmente com leitores de tela.</li>
+        <li><b>SEO</b> mecanismos de busca priorizam páginas com estrutura semântica clara, melhorando o ranqueamento e a visibilidade do site</li>
+        <li><b>Manutenção:</b> facilita atualizações e entendimento pro outros desenvolvedores</li>
+    </ul>
+    <h3>Exemplos de má prática</h3>
+    <ul>
+        <li><i>Usar apenas <span class="tag">&lt;div&gt;</span> e <span class="tag">&lt;span&gt;</span> para criar listas:</i> prejudica a acessibilidade e a compreensão semântica</li>
+        <li><i>Colocar listas de títulos ou informações sem usar as tags apropriadas:</i> dificulta navegação e indexação</li>
+    </ul>
+    <h3>Exemplo correto de uso semântico</h3>
+    <div class="exemplo">
+        <h3>HTML</h3> <span class="tag">&lt;main&gt; <br> &nbsp;&nbsp;&nbsp;&lt;h2&gt;<span>Passos para cadastro</span>&lt;/h2&gt; <br> &nbsp;&nbsp;&nbsp;&lt;ol&gt; <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<span>Preencha o formulário</span>&lt;/li&gt; <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<span>Confirme o e-mail</span>&lt;/li&gt; <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<span>Acesse sua conta</span>&lt;/conta&gt; <br> &nbsp;&nbsp;&nbsp;&lt;/ol&gt; <br> &lt;/main&gt;</span>
+    </div>
 </body>
 </html>
