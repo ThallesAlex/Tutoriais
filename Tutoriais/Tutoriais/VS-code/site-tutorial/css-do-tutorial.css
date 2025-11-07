@@ -1,0 +1,124 @@
+@charset "UTF-8";
+/* CSS do tutorial */
+
+body, span {
+    background-color: black;
+    color: rgb(from purple 255 0 255);
+    
+}
+h1, h2, h3, h4, h5, h6 {
+    color: lemonchiffon;
+}
+hr {
+    border: dashed 2px rgb(from grey 118 138 118);
+}
+table, th, td {
+    border: 2px solid rgb(from grey 118 138 118);
+    border-collapse: collapse;
+    
+    text-align: left;
+    th {
+        text-align: center;
+    }
+}
+th {
+    background-color: rgb(0, 0, 0);
+}
+td {
+    padding-right: 2%;
+}
+caption {
+    color: rgb(221, 100, 100);
+    text-align: center;
+}
+*.atributo {
+    color: rgb(from green 0 255 0);
+    
+}
+
+*.tag{
+    color: rgb(from red 255 0 0);
+    
+}
+*.valor {
+    color: rgb(from blue 0 0 255);
+    
+}
+*.chave {
+    color: rgb(from yellow 255 255 0);
+    
+}
+*.comentario {
+    color: rgb(139, 139, 139);
+    p {
+        color: gray;
+    }
+}
+b {
+    color: darkturquoise;
+}
+*.seletor {
+    color: rgb(from cyan r g b);
+    
+}
+*.propriedade {
+    color: rgb(from orange 255 165 0);
+    
+}
+*.esquerda {
+    float: left;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+*.direita {
+    float: right;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+*.code {
+    color: crimson;
+}
+*.exemplo {
+    color: yellowgreen;
+    background-color: rgb(from rgb(10 0 10) r 1 b);
+    border: inset rgb(from purple 255 0 255);
+    h1, h2, h3, h4, h5, h6 {
+        color: yellowgreen; 
+        border-bottom: solid rgb(from orange 255 165 0);
+    }
+    p {
+        color: rgb(from purple 255 0 255);
+    } 
+    li {
+        color: firebrick;
+    }
+*.tabelaComImagem {
+    h1, h2, h3, h4, h5, h5{
+        color: black;
+    }
+    p {
+        color: lightblue;
+    }
+    .valor {
+        color: lightgreen;
+    }
+    background-color: rgba(0, 77, 144, 0.896);
+    border: 10% solid transparent;
+    border-image: url(/VS-code/CSS/imagens.css/bordas/vecteezy_border_1195178.png) 230 stretch;
+}}
+*.ListaComMarcadorCruz ul, ol {
+    list-style-image: url(imagens.css/favicons/favicon\ cruz.ico);
+}
+li.marcadorSetaEsquerda::marker {
+    content: "→";
+}
+i {
+    color: azure;
+}
+.declaracao {
+    color: skyblue;
+}

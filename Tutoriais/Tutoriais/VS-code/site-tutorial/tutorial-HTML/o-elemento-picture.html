@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O elemento &lt;picture></title>
+</head>
+<body>
+    
+    <h1>O elemento <span class="tag">Picture</span></h1>
+
+    <h2>O  que é o <span class="tag">&lt;picture></span></h2>
+
+    <p>O <span class="tag">&lt;picture> </span>é um <b>contêiner</b> que permite definir <b>múltiplas fontes de imagem</b> para um único <span class="tag">&lt;img></span>. O navegador escolhe automaticamente a imagem mais adequada com base em:</p>
+
+    <ul>
+        <li>Tamanho da tela</li>
+        <li>Resolução do dispositivo</li>
+        <li>Suporte ao formato da imagem (como WebP, JPEG, PNG)</li>
+    </ul>
+
+    <h2>Sintaxe básica</h2>
+
+    <div class="exemplo">
+        <h3>Exemplo básico:</h3>
+        <span class="tag">&lt;picture></span>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;source</span> <span class="atributo">srcset</span><span class="valor">="imagem-alta-resolucao.webp"</span> <span class="atributo">media</span><span class="valor">="(min-width: 800px)"</span> <span class="atributo">type</span><span class="valor">="image/webp"></span>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;source</span> <span class="atributo">srcset</span><span class="valor">"imagem-baixa-resolucao.jpg"</span> <span class="atributo">media</span><span class="valor">="(max-width: 799px)"</span> <span class="atributo">type</span><span class="valor">="image/jpeg"></span>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;img</span> <span class="atributo">src</span><span class="valor">="imagem-padrao.png"</span> <span class="atributo">alt</span><span class="valor">"Descrição da imagem"></span>
+            <br>
+        <span class="tag">&lt;/picture></span>
+    </div>
+
+    <h2>Explicação</h2>
+
+    <ul>
+        <li><b>source:</b> define uma imagem alternativa com base em uma condição (media)</li>
+        <li><b>media:</b> usa media queries pra definir quando aquela imagem deve ser usada</li>
+        <li><b>srcset:</b> caminho da imagem.</li>
+        <li><b class="tag">&lt;img>:</b> imagem padrão, usada se nenhuma <span class="tag">&lt;source></span> for compatível.</li>
+    </ul>
+
+    <h2>Quando usar</h2>
+
+    <ul>
+        <li>Para fornecer imagens responsivas que se adaptam a diferentes tamanhos de tela.</li>
+        <li>Para otimizar o desempenho, carregando imagens menores em dispositivos com telas menores.</li>
+        <li>Para usar formatos de imagem modernos (como WebP) quando suportados pelo navegador.</li>
+    </ul>
+
+    <h2>Exemplos com formatos diferentes</h2>
+
+    <div class="exemplo">
+        <h3>Exemplo com WebP e JPEG:</h3>
+        <span class="tag">&lt;picture></span>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;source</span> <span class="atributo">srcset</span><span class="valor">"imagem.webp"</span> <span class="atributo">type</span><span class="valor">"image/webp"></span>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;source</span> <span class="atributo">srcset</span><span class="valor">"imagem.jpg"</span> <span class="atributo">type</span><span class="valor">"image/jpeg"></span>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;img</span> <span class="atributo">src</span><span class="valor">"imagem.png"</span> <span class="atributo">alt</span><span class="valor">"Descrição da imagem"></span>
+            <br>
+        <span class="tag">&lt;/picture></span>
+    </div>
+
+    <a href="favicon.html">Favicon</a>
+
+</body>
+</html>

@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="/VS-code/CSS/css-do-html.css">
+    <link rel="shortcut icon" href="/VS-code/HTML/imagens.html/favicons/favicon-16x16.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bordas de Tabelas HTML</title>
+</head>
+
+<body>
+
+    <h1>Bordas de Tabelas HTML</h1>
+
+    <p>As bordas são um dos elementos fundamentais na estilização de tabelas em HTML</p>
+    <p>Elas proporcionam estrutura, destaque visual e melhor compreensão de dados apresentados.</p>
+    <p>No final teremos uma tabela resumo com os principais atributos e seus efeitos visuais (para uma consulta rápida).
+    </p>
+
+    <h2>O Papel das Bordas em Tabelas HTML</h2>
+
+    <p>As bordas das tabelas desenpenham funções além do mero visual. Elas separam visualmente os dados, facilitam a
+        leitura. destacam agrupamentos e oferecem feedback visual em interfaces. Com CSS, é possível:</p>
+
+    <ul>
+        <li>Definir bordas para toda a tabela, ou para células e cabeçalhos</li>
+        <li>Variar espessura, cor, estilo e raio de cada canto das bordas</li>
+        <li>Criar efeitos de zebra, realce ao passar o mouse, ou destacar células/ligações específicas</li>
+        <li>Adaptar a aparência para diferentes dispositivos e navegadores</li>
+        <li>Melhorar a acessibilidade e a semânticas do conteúdo</li>
+    </ul>
+
+    <p>O domínio das propriedades a seguir é fundamental para criar experiêcias visuais tanto elegantes quanto
+        funcionais.</p>
+
+    <hr>
+
+    <h2>Atributo HTML <span class="atributo">border</span> - O Começo e Limitações</h2>
+    <h3>Como Usar</h3>
+
+    <p>Historicamente, o atributo <span class="atributo">border</span> em HTML foi a principal forma de adicionar bordas
+        a uma tabela:</p>
+
+    <div class="exemplo">
+        <h3>CSS</h3>
+
+        <p><span class="tag">&lt;table</span> <span class="atributo"> border=<span class=r<span
+                    class="propriedade"></span><span class="valor"></span>valor">"1"></span></span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;tr></span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;th></span>Produto</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;th></span>Preço</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/tr></span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;tr></span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td></span>Café</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td></span>R$8,00</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/tr></span></p>
+        <p><span class="tag">&lt;/table></span></p>
+    </div>
+
+    <ul>
+        <li>Define uma borda externa de largura igual aor<span class="propriedade"></span><span
+                class="valor"></span>valor (em pixels).</li>
+        <li>Valor <span class=r<span class="propriedade"></span><span class="valor"></span>valor">0</span> remove
+            completamente as bordas.</li>
+    </ul>
+
+    <b>Limitações Importantes:</b>
+
+    <ul>
+        <li>Não permite estilização individual (cor ou estilo).</li>
+        <li>NÃO é suportado em HTML5 (obsoleto; para código moderno, use CSS).</li>
+        <li>Não oferece controle sobre as bordas internas nem para células específicas</li>
+    </ul>
+
+    <h3>Substituição Moderna com CSS</h3>
+
+    <p>Para um controle visual e responsividade, deve-se usar CSS</p>
+
+    <div class="exemplo">
+        <h3>CSS</h3>
+        <p><span class="seletor">table </span><span class="chave">{</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border</span>: <span class=r<span
+                class="propriedade"></span><span class="valor"></span>valor">1px solid #444</span>;</p>
+        <span class="chave">}</span>
+    </div>
+
+    <p>Assim, você obtém o equivalente do atributo HTML, porém já abilitando mais personalização</p>
+
+    <hr>
+
+    <h2>Propriedade CSS <span class="propriedade">border</span> - Espessura, Estilo e Cor</h2>
+    <h3>Estrutura da Propriedade <span class="propriedade">border</span></h3>
+
+    <p>A propriedade <span class="propriedade">border</span> permite controlar:</p>
+
+    <ul>
+        <li><b>Largura</b>: <span class="propriedade">border-width</span> (ex: 1px, 2em, thin, thick)</li>
+        <li><b>Estilo</b>: <span class="propriedade">border-style</span> Ex:
+            <ul>
+                <li>solid</li>
+                <li>dashed</li>
+                <li>dotted</li>
+                <li>double</li>
+                <li>groove</li>
+                <li>ridge</li>
+                <li>inset</li>
+                <li>outset</li>
+                <li>none</li>
+                <li>hidden</li>
+            </ul>
+        </li>
+
+        <li><b>Cor</b>: <span class="propriedade">border-color</span> (ex: #0055ff, red, rgba(255, 0, 0, 0.3)</li>
+    </ul>
+
+    <p>Podem ser usadas separadamete (<span class="propriedade">border-top</span>, <span
+            class="propriedade">border-left</span>, etc.) ou em conjunto:</p>
+
+    <div class="exemplo">
+        <h3>CSS</h3>
+        <p><span class="seletor"></span><span class="seletor"></span><span class="chave"></span></p>
+        <p><span class="propriedade">border: </span><span class=r<span class="propriedade"></span><span
+                class="valor"></span>valor">2px dotted #9b59b6;</span></p>
+        <p><span class="comentario">/</span> <span class="comentario">* ou */</span></p>
+        <p><span class="propriedade">border: </span><span class=r<span class="propriedade"></span><span
+                class="valor"></span>valor">2px;</span></p>
+        <p><span class="propriedade">border: </span><span class=r<span class="propriedade"></span><span
+                class="valor"></span>valor">dotted;</span></p>
+        <p><span class="propriedade">border: </span><span class=r<span class="propriedade"></span><span
+                class="valor"></span>valor">#9b59b6;</span></p>
+    </div>
+
+    <h3>Exemplo Prático (Tabela Básica)</h3>
+
+    <div class="exemplo">
+        <h3>HTML</h3>
+        <p><span class="tag">&lt;style></span></p>
+        <p><span class="seletor">table, th, td </span><span class="chave">{</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border</span>: <span class=r<span
+                class="propriedade"></span><span class="valor"></span>valor">1px solid #333;</span></p>
+        <p><span class="chave">}</span></p>
+        <p><span class="tag">/style></span></p>
+        <p><span class="tag">&lt;table></span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;tr></span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;th></span>Aluno<span
+                class="tag">&lt;th></span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;th></span>Nota<span
+                class="tag">&lt;th></span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/tr></span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;tr></span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td></span>Joana<span
+                class="tag">&lt;td></span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td></span>10<span
+                class="tag">&lt;td></span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/tr></span></p>
+        <p><span class="tag">&lt;/table></span></p>
+    </div>
+
+    <p>Com o CSS acima, cada célula e o contorno da tabela terão uma borda sólida de 1px, preta. Note que isso produz,
+        por padrão, linhas duplas entre as células(elementos <span class="tag">th</span>/ <span class="tag">th</span> e
+        a borda da tabela)</p>
+
+    <h3>Variação de Lados</h3>
+
+    <p>É possível criar bordas diferentes em cada lado:</p>
+
+    <div class="exemplo">
+        <h3>CSS</h3>
+        <p><span class="seletor">td</span> <span class="chave">{</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border-top:</span><span class=r<span
+                class="propriedade"></span><span class="valor"></span>valor"> 1px solid #00f;</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border-bottom:</span><span class=r<span
+                class="propriedade"></span><span class="valor"></span>valor"> 2px dashed #f00;</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border-left:</span><span class=r<span
+                class="propriedade"></span><span class="valor"></span>valor"> none;</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border-right:</span><span class=r<span
+                class="propriedade"></span><span class="valor"></span>valor"> 4px double #0f0;</span></p>
+        <p><span class="chave">}</span></p>
+    </div>
+
+    <p>Este recurso é útil para criar efeitos visuais sofisticados e destacar partes específicas da tabela.</p>
+
+    <br>
+
+    <h2>Removendo as Bordas Duplas:</h2>
+
+    <span class="propriedade">border-collapse</span>
+
+    <p>Por padrão, ao definir bordas em <span class="tag">table</span>, <span class="tag">th</span>, <span
+            class="tag">td</span>, as linhas se sobrepõem e aparecem duplas. Para corrigi-lo, utiliza-se <span
+            class="propriedade">border-collapse</span></p>
+
+    <h3>Modos da Propriedade</h3>
+
+    <ul>
+        <li class="propriedade">border-collapse: <span class=r<span class="propriedade"></span><span
+                class="valor"></span>valor">separate</span>(padrão): Células com bordas individuais (aparecem bordas
+            duplas).</li>
+        <li class="propriedade">border-collapse: <span class=r<span class="propriedade"></span><span
+                class="valor"></span>valor">collapse</span>: Bordas sobrepostas viram uma só (visual limpo e moderno).
+        </li>
+    </ul>
+
+    <div class="exemplo">
+        <h3>CSS</h3>
+        <p><span class="seletor">table</span>, <span class="seletor">th</span>, <span class="seletor">td </span><span
+                class="chave">{</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border</span>: <span class=r<span
+                class="propriedade"></span><span class="valor"></span>valor">1px solid #222</span>;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border-collapse</span>: <span class=r<span
+                class="propriedade"></span><span class="valor"></span>valor">collapse</span>;</p>
+        <p><span class="chave">}</span></p>
+    </div>
+
+    <p>O resultado é uma tabela com linhas simples entre células e visual unificado.</p>
+
+    <div class="exemplo">
+        <h3>HTML</h3>
+        <p><span class="tag">&lt;table </span><span class="atributo">style</span>=<span
+                class="propriedade">"border-collapse: </span><span class=r<span class="propriedade"></span><span
+                class="valor"></span>valor">separate;"></span></p>
+        <p><span class="comentario">&lt;!-- Bordas duplas (padrão HTML) --></span></p>
+        <p><span class="">...</span></p>
+        <p><span class="tag">&lt;/table></span></p>
+        <p><span class="tag">&lt;table </span><span class="atributo">style</span>=<span
+                class="propriedade">"border-collapse: </span><span class=r<span class="propriedade"></span><span
+                class="valor"></span>valor">collapse;"></span></p>
+        <p><span class="comentario">&lt;!-- Bordas únicas compartilhadas pelas células --></span></p>
+        <p>...</p>
+        <p><span class="tag">&lt;/table></span></p>
+    </div>
+
+    <p><b>Resumo</b>: Prefira sempre <span class="propriedade">border-collapse</span>: <span class=r<span
+            class="propriedade"></span><span class="valor"></span>valor">collapse</span> para tabelas de dados — este é
+        o padrão visual moderno e elimina facilmente as linhas duplas, além de ser suportado por todos os navegadores
+        modernos.</p>
+
+    <hr>
+
+    <h2>Espaçamento entre Células: <span class="propriedade">border-spacing</span></h2>
+
+    <p>Quando se utiliza <span class="propriedade">border-collapse: </span><span class=r<span
+            class="propriedade"></span><span class="valor"></span>valor"> separate</span>, é possível controlar o espaço
+        entre as células com <span class="propriedade">border-spacing</span>: </p>
+
+    <div class="exemplo">
+        <h3>CSS</h3>
+        <p><span class="seletor">table </span><span class="chave">{</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border-collapse</span><span class=r<span
+                class="propriedade"></span><span class="valor"></span>valor"> separate</span>;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border-spacing</span><span class=r<span
+                class="propriedade"></span><span class="valor"></span>valor"> 10px 20px</span>; <span
+                class="comentario">/* Horizontal 10px, Vertical 20px */</span></p>
+        <p><span class="chave">}</span></p>
+    </div>
+
+    <ul>
+        <li>O primeiror<span class="propriedade"></span><span class="valor"></span>valor é o espaçamento horizontal; o
+            segundo, vertical.</li>
+        <li>Essencial para designs que requerem separação visual entre células.</li>
+        <li><b>Importante:</b> <span class="propriedade">border-spacing</span> não faz efeito se a propriedade <span
+                class="propriedade">border-collapse</span> estiver setada como <span class=r<span
+                class="propriedade"></span><span class="valor"></span>valor">collapse</span></li>
+    </ul>
+
+    <div class="exemplo">
+        <h3>CSS</h3>
+        <p><span class="seletor">table </span><span class="chave">{</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border-collapse</span>: <span class=r<span
+                class="propriedade"></span><span class="valor"></span>valor">separate</span>;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border-spacing</span>: <span class=r<span
+                class="propriedade"></span><span class="valor"></span>valor">8px 16px</span>;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border</span>: <span class=r<span
+                class="propriedade"></span><span class="valor"></span>valor">1px solid #444</span>;</p>
+        <p><span class="chave">}</span></p>
+        <p><span class="seletor">td </span><span class="chave">{</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border</span>: <span class=r<span
+                class="propriedade"></span><span class="valor"></span>valor">1px solid #444</span>;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">text-align</span><span class=r<span
+                class="propriedade"></span><span class="valor"></span>valor"></span></p>
+        <p><span class="chave">}</span></p>
+    </div>
+
+    <p>Esta configuração aplica espaços entre células, além da borda ao redor de cada célula.</p>
+
+    <hr>
+
+    <h2>Controle fino: <span class="propriedade">border-style</span>, <span class="propriedade">border-width</span> e
+        <span class="propriedade">border-style</span></h2>
+
+    <p>Define o visual da linha: sólida, pontilhada, tracejada, dupla, 3D, oculta, etc.</p>
+    <div class="exemplo">
+        <h3>CSS</h3>
+        <p><span class="seletor">th</span>, <span class="seletor">td </span><span class="chave">{</span></p>
+        <p><span class="propriedade">border-style</span>: <span class=r<span class="propriedade"></span><span
+                class="valor"></span>valor">dashed</span>;
+            <span class="comentario">/*Possíveis valores:
+                <ul class="comentario" style="border-spacing: 3px 3px; border-collapse: separate;">
+                    <li style="border-style: solid;">solid</li> <br>
+                    <li style="border-style: dashed;">dashed</li><br>
+                    <li style="border-style: dotted;">dotted</li><br>
+                    <li style="border-style: double;">double</li><br>
+                    <li style="border-style: groove;">groove</li><br>
+                    <li style="border-style: ridge;">ridge</li><br>
+                    <li style="border-style: outset;">outset</li><br>
+                    <li style="border-style: inset;">inset</li><br>
+                    <li style="border-style: none;">none</li><br>
+                    <li style="border-style: hidden;">hidden</li><br>
+                </ul>
+            </span>
+        </p>
+        <p><span class="chave">}</span></p>
+    </div>
+
+    <p><span class="propriedade">border-width</span></p>
+    <p>Controla a espessura da borda. Aceita de 1 a 4 medidas (em px, em, %, etc)</p>
+    <div class="exemplo">
+        <h3></h3>
+        <p><span class="seletor">td </span><span class="chave">{</span></p>
+        <p><span class="propriedade">border-width</span>: <span class=r<span class="propriedade"></span><span
+                class="valor"></span>valor">2px 4px</span>; <span class="comentario">/* 2px para topo/baixo, 4px para
+                esquerda/direita */</span></p>
+    </div>
+
+    <p><span class="propriedade">border-color</span></p>
+    <p>Define as cores da borda, podendo ser distintas para cada lado:</p>
+
+    <div class="exemplo">
+        <h3>CSS</h3>
+        <span class="seletor">td </span><span class="chave">{</span><br>
+        <span class="propriedade">&nbsp;&nbsp;&nbsp;&nbsp;border-color</span>:<span class=r<span
+            class="propriedade"></span><span class="valor"></span>valor"></span><span class="comentario"></span><br>
+        <span class="propriedade">&nbsp;&nbsp;&nbsp;&nbsp;border-color</span>: <span class=r<span
+            class="propriedade"></span><span class="valor"></span>valor">red green blue yellow</span>; <span
+            class="comentario">/* topo, direita, baixo, esquerda */</span><br>
+        <span class="chave">}</span>
+    </div>
+
+    <p>Estas três propriedades podem ser usadas juntas, permitindo customização avançada. Também aceitam valores
+        individuais em <span class="propriedade">border-top-width</span>, <span class="propriedade">border-right-style
+        </span> etc. A personalização é plena.</p>
+    <hr>
+
+    <h2>Bordas Arredondadas: <span class="propriedade">border-radius</span></h2>
+
+    <p>A propriedade <span class="propriedade">border-radius</span> aplica cantos arredondadas às bordas de elementos,
+        inclusive tabelas. Sua sintaxe permite flexibilidade para criar desde círculos até raios distintos em cada
+        canto:</p>
+
+    <div class="exemplo">
+        <h3>CSS</h3>
+        <p><span class="seletor">table </span><span class="chave">{</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border</span>: <span class=r<span
+                class="propriedade"></span><span class="valor"></span>valor">2px solid #777</span>;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border-radius</span>: <span class=r<span
+                class="propriedade"></span><span class="valor"></span>valor">12px</span>;</p>
+        <p><span class="chave">}</span></p>
+    </div>
+
+    <h4>Valores Individuais</h4>
+
+    <div class="exemplo">
+        <h3></h3>
+        <p><span class="seletor">table</span> <span class="chave">{</span></p>
+        <p><span class="propriedade">&nbsp;&nbsp;&nbsp;&nbsp;border-radius</span>: <span class=r<span
+                class="propriedade"></span><span class="valor"></span>valor"> 10px 25px 30px 5px</span>; <span
+                class="comentario">/* topo-esquerda, topo-direita, inferior-direita, inferior-esquerda */</span></p>
+        <p><span class="chave">}</span></p>
+    </div>
+
+    <p>Observações Importantes</p>
+
+    <ul>
+        <li>Ap usar <span class="propriedade">border-collapse</span>, o arrendondamento pode não funcionar corretamente
+            em todos os navegadores para bordas internas/externas.</li>
+        <li>Para garantir bordas arredondadas sem bug visual, use frequentemente <span
+                class="propriedade">border-collapse</span>: <span class="propriedade">separate</span> junto com <span
+                class="propriedade">overflow</span>: <span class=r<span class="propriedade"></span><span
+                class="valor"></span>valor">hidden</span>.</li>
+    </ul>
+
+    <div class="exemplo">
+        <h3>HTML</h3>
+        <p><span class="tag">&lt;style></span></p>
+        <p><span class="seletor">table </span><span class="chave">{</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border</span>: <span class=r<span
+                class="propriedade"></span><span class="valor"></span>valor">1px solid #888</span>;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border-radius</span>: <span class=r<span
+                class="propriedade"></span><span class="valor"></span>valor">15px</span>;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border-collapse</span>: <span class=r<span
+                class="propriedade"></span><span class="valor"></span>valor">separate</span>;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">overflow</span>: <span class=r<span
+                class="propriedade"></span><span class="valor"></span>valor">hidden</span>;</p>
+        <p><span class="chave">}</span></p>
+        <p><span class="seletor">td, th </span><span class="chave">{</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border: </span><span class=r<span
+                class="propriedade"></span><span class="valor"></span>valor">1px solid #888</span>;</p>
+        <p><span class="chave">}</span></p>
+        <p><span class="tag">&lt;/style></span></p>
+        <p><span class="tag">&lt;table></span></p>
+        <p><span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr></span></p>
+        <p><span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th></span>Nome <span
+                class="tag">&lt;/th></span></p>
+        <p><span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th></span>Cidade <span
+                class="tag">&lt;/th></span></p>
+        <p><span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr></span></p>
+        <p><span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr></span></p>
+        <p><span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td></span>Ana <span
+                class="tag">&lt;/td></span></p>
+        <p><span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td></span>Rio <span
+                class="tag">&lt;/td></span></p>
+        <p><span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr></span></p>
+        <p><span class="tag">&lt;/table></span></p>
+    </div>
+    <p>Nas bordas arredondadas, o design se torna mais amigável e moderno</p>
+    <hr>
+
+    <h2>Bordas com imagens: <span class="propriedade">border-image</span></h2>
+
+    <p>A propriedade <span class="propriedade">border-image</span> traz possibilidades criativas, subtituindo a linha
+        sólida da borda por uma imagem. Ideal para molduras ricas ou visuais lúdicos:</p>
+
+    <h3>Sintaxe Simples</h3>
+
+    <div class="tabelaComImagem">
+        <h3>CSS</h3>
+        <p><span class="seletor">table</span><span class="chave">{</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border</span>:<span class="valor"></span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border-image</span>:<span class="valor">
+                url(/VS-code/CSS/imagens.css/bordas/vecteezy_border_1195178.png);</span></p>
+        <p><span class="chave">}</span></p>
+    </div>
+
+    <ul>
+        <li><span class="propriedade">border-image-source</span>: O arquivo de imagem (ou gradiente).</li>
+        <li><span class="propriedade">border-image-slice</span>: Onde a imagem é cortada para formar cantos e partes
+            laterais.</li>
+        <li><span class="propriedade">border-image-width</span>: Largura da borda.</li>
+        <li><span class="propriedade">border-image-repeat</span>: como repetir a imagem (<span
+                class="valor">stretch</span>, <span class="valor">repeat</span>, <span class="valor">round</span>, <span
+                class="valor">space</span>)</li>
+    </ul>
+
+    <p><b>Dica</b>: Defina sempre <span class="propriedade">border-style</span>, pois alguns navegadores não exibem a
+        imagem se faltar o estilo ou largura.</p>
+
+    <h3>Observações Especiais</h3>
+
+    <ul>
+        <li><span class="propriedade">border-image</span> não funciona em células internas (<span
+                class="tag">td</span>/<span class="tag">th</span>) quando <span
+                class="propriedade">border-collapse</span> está como <span class="tag">collapse</span>- use em tabelas
+            com <span class="propriedade">border-collapse</span>: <span class="tag">separate</span> ou apenas na borda
+            externa da tabela</li>
+        <li>Não suporta cantos arredondados(<span class="propriedade">border-radius</span>): para efeitos visuais com
+            cantos arredondados, crie bordas do do tipo imagem já com os cantos arredondados</li>
+    </ul>
+    <br>
+
+    <h3>Exemplo Prático</h3>
+
+    <div class="exemplo">
+        <h3>CSS</h3>
+        <p><span class="seletor">table</span> <span class="chave">{</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border</span>:<span class="valor"> 12px solid #fff</span>;
+        </p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border-image</span>:<span class="valor">
+                url(border-frame.png) 30 round</span>;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border-collapse</span>:<span class="valor">
+                separate</span>;</p>
+        <p><span class="chave">}</span></p>
+    </div>
+
+    <p>Este recurso é pouco usado em tabelas de dados, mas pode destacar quadros especiais ou galerias de imagens.</p>
+    <hr>
+
+    <h2>Diferença entre <span class="propriedade">border-collapse</span> e <span
+            class="propriedade">border-spacing</span></h2>
+
+    <p>A distinção entre essas propriedades é fundamental para uma estilização de tabelas sem surpresas:</p>
+
+    <ul>
+        <li><span class="propriedade">border-collapse</span>: <span class="valor">collapse</span>; elimina qualquer
+            espaçamento entre células e colapsa as bordas duplas em uma só. Não é possível utilizar <span
+                class="propriedade">border-spacing</span> nesse modo</li>
+        <li><span class="propriedade">border-collapse</span>: <span class="valor">separate</span>; exibe as bordas de
+            cada célula independentemente e permite o uso de <span class="propriedade">border-spacing</span> para
+            adicionar espaço entre elas</li>
+    </ul>
+
+    <h3>Exemplo visual</h3>
+
+    <h3>Exemplo visual</h3>
+    <div class="exemplo">
+        <h3></h3>
+        <p><span class="comentario">/* com collapse - bordas unidas */</span><span class=""></span></p>
+        <p><span class="seletor">table</span><span class="chave">{</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border-collapse</span>: <span
+                class="valor">collapse</span>;</p>
+        <p><span class="chave">}</span></p>
+        <p><span class="comentario">/* com separate e espaçamento */</span><span class=""></span></p>
+        <p><span class="seletor">table</span><span class="chave">{</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border-collapse</span>: <span
+                class="valor">collapse</span>;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border-spacing</span>: <span class="valor">12px 6px</span>;
+            <span class="comentario">/* horizontal | vertical */</span></p>
+        <p><span class="chave">}</span><span class=""></span></p>
+    </div>
+    <p><b>Dica Importante:</b> O efeito visual é completamente diferente e impacta tanto na clareza quanto no espaço
+        utilizado pela tabela em tarefas pequenas.</p>
+    <hr>
+
+    <h3>Exemplos Práticos de Código HTML e CSS</h3>
+
+    <h3>Exemplo 1: Tabela Básica com Bordas Simples</h3>
+
+    <div class="exemplo">
+        <h3>HTML</h3>
+        <p><span class="tag">&lt;style></span></p>
+        <p><span class="seletor">table, th, td </span><span class="chave">{</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border</span>: <span class="valor">1px solid #444</span>;
+        </p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border-collapse</span>: <span
+                class="valor">collapse</span>;</p>
+        <p><span class="chave">}</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="seletor">th, td </span><span class="chave">{ </span></p>
+        <p><span class="propriedade">padding</span>: <span class="valor">8px</span>;</p>
+        <p><span class="chave">}</span></p>
+        <p><span class="tag">&lt;/style></span></p><br>
+
+        <p><span class="tag">&lt;table></span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;tr></span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;th></span>Empresa<span
+                class="tag">&lt;/th></span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;th></span>Contato<span
+                class="tag">&lt;th></span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;th></span>País<span
+                class="tag">&lt;th></span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/tr></span>
+            << /p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;tr></span></p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;td></span>Total Plan<span
+                        class="tag">&lt;td></span></p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;td></span>Maria Dolores<span
+                        class="tag">&lt;td></span></p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;td></span>Alemanha<span
+                        class="tag">&lt;td></span></p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/tr></span></p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;tr></span></p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;td></span>Epic Kiwi<span
+                        class="tag">&lt;/td></span></p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;td></span>Mario Bento<span
+                        class="tag">&lt;/td></span></p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&lt;td></span>Brasil<span
+                        class="tag">&lt;/td></span></p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/tr></span></p>
+                <p><span class="tag">&lt;/table></span></p>
+    </div>
+
+    <h3>Exemplo 2: Bordas de Células com Espessura, Cor e Estilo Diferentes</h3>
+
+    <div class="exemplo">
+        <h3></h3>
+        <p><span class="seletor">td </span><span class="chave">{</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border</span>: <span class="valor">3px double #5c5</span>;
+        </p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border-right</span>: <span class="valor">1px solid
+                #000</span>;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border-botton</span>: <span class="valor">2px dashed
+                #c55</span>;</p>
+        <p><span class="chave">}</span></p>
+        <p><span class="seletor">td </span><span class="chave">{</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border</span>: <span class="valor">4px solid
+                #246ac7</span>;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">background</span>: <span class="valor">#e4e4e4</span>;</p>
+        <p><span class="chave">}</span></p>
+    </div>
+
+    <h3>Exemplo 3: Tabela com Bordas Arredondadas</h3>
+
+    <div class="exemplo">
+        <h3></h3>
+        <p><span class="seletor">table </span><span class="chave">{</span></p>
+        <p><span class="propriedade">border</span>: <span class="valor">2px solid #333</span>;</p>
+        <p><span class="propriedade">border-radius</span>: <span class="valor">12px</span>;</p>
+        <p><span class="propriedade">overflow</span>: <span class="valor">hidden</span>;</p>
+        <p><span class="propriedade">border-collapse</span>: <span class="valor">separate</span>;</p>
+        <p><span class="chave">}</span></p>
+        <p><span class="seletor">td, th </span><span class="chave">{</span></p>
+        <p><span class="propriedade">border</span>: <span class="valor">1px solid #333</span>;</p>
+        <p><span class="propriedade">padding</span>: <span class="valor">10px</span>;</p>
+        <p><span class="chave">}</span></p>
+    </div>
+
+    <h3>Exemplo 4: Usando <span class="propriedade">border-spacing</span> para Espaçamento entre Células</h3>
+
+    <div class="exemplo">
+        <h3>CSS</h3>
+        <p><span class="seletor">table</span><span class="chave">{</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border-collapse</span>: <span
+                class="valor">separate</span>;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border-spacing</span>: <span class="valor">6px
+                14pxx</span>;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border</span>: <span class="valor">1px solid
+                #6666ff</span>;</p>
+        <p><span class="chave">}</span></p>
+        <p><span class="seletor">td</span><span class="chave">{</span> </p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border</span>: <span class="valor">1px solid
+                #6666ff</span>;</p>
+        <p><span class="chave">}</span></p>
+    </div>
+
+    <h3>Exemplo 5: Efeito Zebra e Realce ao Passar do Mouse</h3>
+
+    <div class="exemplo">
+        <h3>CSS</h3>
+        <p><span class="seletor">tr:nth-child(2n)</span> <span class="chave">{</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">background</span>: <span class="valor">#f0f0f0</span>;</p>
+        <p><span class="chave">}</span> </p>
+        <p><span class="seletor">td:hover </span><span class="chave">{</span> </p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp; <span class="propriedade">background</span>: <span class="valor">#e2ffd0</span></p>
+        <p><span class="chave">}</span></p>
+    </div>
+
+    <h3>Exemplo 6: Moldura Decorativa com <span class="propriedade">border-image</span></h3>
+
+    <div class="exemplo">
+        <h3>CSS</h3>
+        <p><span class="seletor">table</span><span class="chave">{</span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border</span>: <span class="valor">10px solid
+                transparent</span>;</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="propriedade">border-image</span>: <span
+                class="valor">url("imagem-da-borda.png") 30 round;</span></p>
+        <p><span class="propriedade">border-collapse</span>: <span class="valor">separate</span>;</p>
+        <p><span class="chave">}</span></p>
+    </div>
+    <hr>
+    <h2>Tabela Comparativa Resumida dos Atributos de Borda em Tabelas HTML</h2>
+
+    <table>
+        <tr>
+            <th>Atributos/Propriedades</th>
+            <th>Definido em</th>
+            <th>Utilidade</th>
+            <th>Padrão</th>
+            <th>Observação</th>
+        </tr>
+        <tr>
+            <td><span class="atributo">border(HTML)</span></td>
+            <td><span class="tag">&lt;table></span></td>
+            <td>Borda básica(obsoleta); largura da borda externa</td>
+            <td>0(sem borda)</td>
+            <td>Não recomendado, sem estilo ou cor</td>
+        </tr>
+        <tr>
+            <td><span class="propriedade">border(CSS)</span></td>
+            <td><span class="seletor">table </span>, <span class="seletor">th</span>, <span class="seletor">td</span></td>
+            <td>Espessura/Estilo/Cor das bordas</td>
+            <td>none</td>
+            <td>Maior flexibilidade e personalização</td>
+        </tr>
+        <tr>
+            <td><span class="propriedade">border-style</span></td>
+            <td><span class="seletor">table </span>, <span class="seletor">th</span>, <span class="seletor">td</span></td>
+            <td>Tipo: <span class="valor">solid | dashed | dotted</span></td>
+            <td>None</td>
+            <td>Use junto com <span class="tag">border-width</span> e <span class="tag">border-color</span></td>
+        </tr>
+        <tr>
+            <td><span class="propriedade">border-width</span></td>
+            <td><span class="seletor">table </span>, <span class="seletor">th</span>, <span class="seletor">td</span></td>
+            <td>Largura das bordas em px, em, %, thin, medium, thick</td>
+            <td>medium</td>
+            <td>Pode ser diferente em cada lado</td>
+        </tr>
+        <tr>
+            <td><span class="propriedade">border-color</span></td>
+            <td><span class="seletor">table </span>, <span class="seletor">th</span>, <span class="seletor">td</span></td>
+            <td>Cores diferentes para cada lado</td>
+            <td>cor do texto atual</td>
+            <td>Consute contraste para acessibilidade</td>
+        </tr>
+        <tr>
+            <td><span class="propriedade">border-radius</span></td>
+            <td><span class="seletor">table </span>, <span class="seletor">th</span>, <span class="seletor">td</span></td>
+            <td>Arredondamento dos cantos da tabela</td>
+            <td>0</td>
+            <td>Limitações com <span class="valor">collapse</span>, use <span class="valor">separate</span> se precisar</td>
+        </tr>
+        <tr>
+            <td><span class="propriedade">border-image</span></td>
+            <td><span class="seletor">table</span>(preferencialmente)</td>
+            <td>Imagem para a borda da tabela</td>
+            <td>None</td>
+            <td>Não funciona com <span class="valor">collapse</span> na maioria dos navegadores</td>
+        </tr>
+        <tr>
+            <td><span class="propriedade">border-collapse</span></td>
+            <td><span class="seletor">table</span></td>
+            <td>Collapsa/Separa bordas entre células</td>
+            <td>separate</td>
+            <td>Prefira <span class="valor">collapse</span> para evitar linhas duplas</td>
+        </tr>
+        <tr>
+            <td><span class="propriedade">border-spacing</span></td>
+            <td><span class="seletor">table</span></td>
+            <td>Espaçamento entre bordas de células</td>
+            <td>0</td>
+            <td>Dois valores: <span class="valor">horizontal</span> e <span class="valor">vertical</span></td>
+        </tr>
+    </table>
+
+    <a href="tabelas-html.html" class="esquerda">Anterior</a>
+    <a href="tamanho-de-tabelas-html.html" class="direita">Próximo</a>    
+
+</body>
+
+</html>

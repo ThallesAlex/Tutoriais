@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Estilos HTML CSS</title>
+    </head>
+    <body>
+
+        <h1>Estilos HTML - CSS</h1>
+
+        <p>CSS significa Cascading Style Sheets</p>
+        <p>CSS economiza muito trabalho. pode controlar o layout de vária páginas da web de uma só vez.</p>
+
+        <h2>O que é CSS?</h2>
+
+        <p>As folhas de estilo em cascata (CSS) são usadas para formatar o layout de uma página da Web.</p>
+        <p>Com CSS, você pode controlar a cor, a fonte, o tamanho do texto, o espaçamento entre os elementos, como os elementos são posicionados e dispostos, qual o plano de fundo imagens ou cores de fundo devem ser usadas, exibições diferentes para dispositivos diferentes e tamanhos de tela e muito mais!</p>
+        <p><b>Ponto:</b> A palavra <b>cascata</b> significa que um estilo aplicado a um elemento pai também se aplicará a todos os elementos filhos dentro do pai. Portanto, se você definir a cor do corpo do texto como "azul", todos os títulos, parágrafos e outros elementos de texto dentro do corpo também terão a mesma cor (a menos que você especifique outra coisa)!</p>
+        
+        <h2>Usando CSS</h2>
+
+        <p>O CSS pode ser adicionado a documentos HTML de 3 maneiras:</p>
+
+        <ul>
+
+            <li><b>Inline</b> - usando o atributo <span class="atributo">style</span>dentro de elementos HTML</li>
+            <li><b>Interno</b> - usando um elemento <span class="tag">&lt;head&gt;</span></li>
+            <li><b>Externo</b> - usando um elemento <span class="tag">&lt;link&gt;</span> para vincular a um aequivo CSS externo</li>
+
+        </ul>
+
+        <p>A maneira mais comum de adicionar CSS é manter os estilos em CSS externo. No entanto, neste tutorial, usaremos estilos embutidos e internos, porque isso é mais fácil de usar. demonstrar, e mais fácil para você experimentá-lo você mesmo.</p>
+
+        <h2>CSS Inline</h2>
+
+        <p>Um CSS inline é usado para aplicar um estilo exclusivo a um único elemento HTML.</p>
+        <p>Um CSS inline usa o atributo <span class="atributo">&lt;style&gt;</span> de um elemento HTML</p>
+        <p>O exemplo a seguir define a cor do texto do elemento <span class="tag">&lt;h1&gt;</span> como azul, e a cor do texto do elemento <span class="tag">&lt;p&gt;</span> para vermelho:<h1><p></p>
+
+        <div class="exempçlo">
+
+            <h3>Exemplo</h3>
+
+            <p style="font-size: 14px; color: blue;"><span class="tag">&lt;h1</span><span class="atributo"> style</span><span class="valor">="color: blue;"></span> Um título azul <span class="tag">&lt;/h1&gt;</span></p>
+            <p style="font-size: 14px; color: red;"><span class="tag">&lt;p</span><span class="atributo"> style</span><span class="valor">="color: red;"></span>um parágrafo vermelho<span class="tag">&lt;/p&gt;</span></p>
+
+        </div>
+
+        <h2>CSS interno</h2>
+
+        <p>Um CSS interno é usado para definir um estilo para uma página HTML</p>
+        <p>Um CSS é definido na seção <span class="tag">&lt;style&gt;</span> de uma página HTML, dentro de um elemento <span class="tag">&lt;head&gt;</span></p>
+        <p>O exemplo a seguir define a cor do texto de TODOS os elementos <span class="tag">&lt;h1&gt;</span>(nessa página) para azul, e a cor do texto de TODOS os elementos <span class="tag">&lt;p&gt;</span> para vermelho. Além disso, a página será exibida com uma cor de fundo "powderblue":</p>
+
+        <div class="exemplo">
+
+            <p class="declaracao">&lt;!DOCTYPE html&gt;</p>
+            <p class="tag">&lt;head&gt;</p>
+            <p class="tag">&lt;style&gt;</p>
+            <p class="seletor">body <span class="propriedade">{background-color: </span><span class="valor">powderblue;}</span></p>
+            <p class="seletor">h1 <span class="propriedade">  {color:</span> <span class="valor">blue;}</span></p>
+            <p class="seletor">p <span class="propriedade">  {color:</span> <span class="valor">red;}</span></p>
+            <p class="tag">&lt;/style&gt;</p>
+            <p class="tag">&lt;/head&gt;</p>
+            <p class="tag">&lt;body&gt;</p>
+            <p class="tag">&lt;h1&gt;</span>Um título azul<span class="tag">&lt;/h1&gt;</span></p>
+            <p class="tag">&lt;p&gt;</span>um parágrafo vermelho<span class"="tag">&lt;/p&gt;</span></p>
+            <p class="tag">&lt;/body&gt;</p>
+            <p class="tag">&lt;/html&gt;</p>
+            
+        </div>
+
+        <h2>CSS externo</h2>
+
+        <p>Uma folha de estilo externa é usada para definir o estilo de muitas páginas HTML.</p>
+        <p>Para usar uma folha de estilo externa,adicione um link para ela na seção <span class="tag">&lt;head&gt;</span> de cada página HTML.</p>
+        </p>O link é definido usando um elemento <span class="tag">&lt;link&gt;</span>, com os atributos <span class="atributo">rel</span> e <span class="atributo">href</span>:</p>
+
+        <div class="exemplo">
+
+            <p class="declaracao">&lt;!DOCTYPE html&gt;</p>
+            <p class="tag">&lt;html&gt;</p>
+            <p class="tag">&lt;head&gt;</p>
+            <p class="tag">&lt;link</span> <span class="atributo">rel</span><span class="valor">="stylesheet"</span> <span class="atributo">href</span><span class="valor">="meu-estilo.css"&gt;</span></p>
+            <p class="tag">&lt;/head&gt;</p>
+            <p class="tag">&lt;body&gt;</p><br>
+            <p class="tag">&lt;h1&gt;</span>Um título azul<span class="tag">&lt;/h1&gt;</span></p>
+            <p class="tag">&lt;p&gt;</span>um parágrafo vermelho<span class"="tag">&lt;/p&gt;</span></p><br>
+            <p class="tag">&lt;/body&gt;</p>
+            <p class="tag">&lt;/html&gt;</p>
+
+        </div>
+
+        <p>A folha de estilo externa pode ser escrita em qualquer editor de texto. O arquivo não pode conter nenhum HTML e deve ser salvo com uma extensão .css</p>
+        <p>Aqui está a aparência do arquivo "styles.css":</p>
+
+        <div class="exemplo">
+
+            <h3>"meu-estilo.css"</h3>
+
+            <div>
+
+                <p class="seletor">body <span class="propriedade">{<br>background-color: </span><span class="valor">powderblue<br>;}</span></p>
+                <p class="seletor">h1 <span class="propriedade">  {<br>color:</span> <span class="valor">blue<br>;}</span></p>
+                <p class="seletor">p <span class="propriedade">  {<br>color:</span> <span class="valor">red<br>;}</span></p>
+
+            </div>
+
+        </div>
+
+        <p><b>Ponto:</b>Com uma folha de estilo externa, você pode alterar a aparência de um site inteiro, alterando um arquivo!</p>
+
+        <h2>Cores, Fontes e Tamanhos CSS</h2>
+
+        <p>Aqui, te mostrarei algumas propriedades CSS comumente usadas.</p>
+        <p>A propriedade CSS <span class="propriedade">valor</span> define a cor do texto a ser usada</p>
+        <p>A propriedade CSS <span class="propriedade">font-family</span> define a fonte a ser usada.</p>
+        <p>A propriedade CSS <span class="propriedade">font-size </span>define o tamanho do texto a ser usado.</p>
+
+        <div class="exemplo">
+
+            <h3>Exemplo</h3>
+
+            <p>Uso das propriedades CSS color, font-size e font-family</p>
+
+            <p class="declaracao">&lt;!DOCTYPE html&gt;</p>
+            <p class="tag">&lt;html&gt;</p>
+            <p class="tag">&lt;head&gt;</p>
+            <p class="tag">&lt;style&gt;</p>
+            <p class="seletor">h1 <span class="propriedade">{<br>color:</span> <span class="valor">blue; <br>&Tab;font-family: verdana;<br>&Tab; font-size: 300%;<br>}</span></p>
+            <p class="tag">&lt;/style&gt;</p>
+            <p class="tag">&lt;/head&gt;</p>
+            <p class="tag">&lt;body&gt;</p>
+            <p class="tag">&lt;h1&gt;</span>Um título azul em Verdana, tamanho 300%<span class="tag">&lt;/h1&gt;</span></p>
+            <p class="tag">&lt;/body&gt;</p>
+            <p class="tag">&lt;/html&gt;</p>
+
+        </div>
+
+        <h2>Borda CSS</h2>
+
+        <p>A propriedade CSS <span class="propriedade">border</span> define uma borda em torno de um elemento HTML.</p>
+        <p><b>Ponto:</b> Você pode definir uma borda para quase todos os elementos HTML.</p>
+
+        <div class="exemplo">
+
+            <p class="seletor">p {<br>
+                <span class="propriedade">border:</span><span class="valor"> 2px solid powderblue; <br> 
+                }</span>
+            </p>
+
+        </div>
+
+        <h2>Preenchimento CSS</h2>
+
+        <p>A propriedade CSS <span class="propriedade">padding </span> define um Preenchimento(espaço) entre o texto e a borda.</p>
+
+        <div class="exemplo">
+
+            <p class="seletor">p {<br>
+                <span class="propriedade">border:</span><span class="valor"> 2px solid powderblue; <br> 
+                <span class="propriedade">padding:</span><span class="valor"> 20px; <br> 
+                }</span>
+            </p>
+
+        </div>
+
+        <h2>Margem CSS</h2>
+
+        <p>A propriedade CSS <span class="propriedade">margin</span> define uma margem (espaço) fora da fronteira.</p>
+
+        <div class="exemplo">
+
+            <p class="seletor">p {<br>
+                <span class="propriedade">border:</span><span class="valor"> 2px solid powderblue; <br> 
+                <span class="propriedade">margin: </span><span class="valor"> 50px</span>
+            </p>
+
+        </div>
+        
+        <h2>Link para CSS externo</h2>
+
+        <p>As folhas de estilo externas podem ser referenciadas com um URL completo ou com um caminho relativo à página da Web atual.</p>
+
+        <div class="exemplo">
+
+            <p>Este exemplo usa uma URL completa para vincular a uma folha de estilo:</p>
+
+            <div>
+                
+                <p class="atributo">&lt;link</span> <span class="atributo">rel</span><span class="valor">="stylesheet"</span> <span class="atributo">href</span><span class="valor">="https://www.w3schools.com/w3css/4/w3.css"&gt;</span></p>
+
+            </div>
+
+        </div>    
+
+        <div class="exemplo">
+
+            <p>Este exemplo usa um caminho relativo para vincular a uma folha de estilo:</p>
+
+            <div>
+                
+                <p class="atributo">&lt;link</span> <span class="atributo">rel</span><span class="valor">="stylesheet"</span> <span class="atributo">href</span><span class="valor">="/css/meu-estilo.css"&gt;</span></p>
+
+            </div>
+
+        </div>
+
+        <div class="exemplo">
+
+            <p>este exemplo é vinculado a uma folha de estilos localizada na mesma pasta que a página HTML:</p>
+
+            <div>
+                
+                <p class="atributo">&lt;link</span> <span class="atributo">rel</span><span class="valor">="stylesheet"</span> <span class="atributo">href</span><span class="valor">="meu-estilo.css"&gt;</span></p>
+            
+            </div>
+
+        </div>
+
+        <a href="links-html.html">Links HTML</a>
+
+    </body>
+</html>

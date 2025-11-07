@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="/VS-code/CSS/css-do-html.css">
+    <link rel="shortcut icon" href="/VS-code/CSS/imagens.css/favicons/favicon cruz.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colspan e Rowspan</title>
+</head>
+<body>
+    <h1>Colspan e Rowspan</h1>
+
+    <h2>O que é <span class="atributo">colspan</span>?</h2>
+
+    <ul>
+        <li><span class="atributo">colspan</span> faz uma célula ocupar <i>várias colunas</i></li>
+        <li>Usado você quer que uma célula se estenda horizontalmente</li>
+    </ul>
+
+    <b>Exemplo:</b>
+
+    <div class="exemplo">
+        <h3>HTML</h3>
+        <p><span class="tag">&lt;table </span><span class="atributo">border</span>= <span class="valor">"1"</span><span class="tag">></span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;tr></span> </p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;th</span><span class="atributo"> colspan</span>=<span class="valor">"2"</span><span class="tag">></span>Nome Completo <span class="tag">&lt;/th></span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;th></span>Idade <span class="tag">&lt;/th></span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;tr></span></p>
+        <p><span class="tag">&lt;tr></span></p>
+        <p><span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td></span>João<span class="tag">&lt;/td></span></p>
+        <p><span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td></span>Silva<span class="tag">&lt;/td></span></p>
+        <p><span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td></span>25<span class="tag">&lt;/td></span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;tr></span></p>
+        <p><span class="tag">&lt/table></span></p>
+    </div> 
+    <p>Aqui, a célula "Nome completo" ocupa duas colunas: "João" e "Silva".</p>
+
+    </div>
+    <hr>
+
+    <h2>O que é <span class="atributo">rowspan</span>?</h2>
+
+    <ul>
+        <li><span class="atributo">rowspan</span> faz uma célula ocupar <i>várias linhas</i></li>
+        <li>Usado quando você quer uma célula se estenda verticalmente</li>
+    </ul>
+
+    <div class="exemplo">
+        <h3>HTML</h3>
+        <p><span class="tag">&lt;table </span><span class="atributo">border</span>= <span class="valor">"1"</span><span class="tag">></span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;tr></span> </p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;th</span><span class="atributo"> rowspan</span>=<span class="valor">"2"</span><span class="tag">></span>Telefone<span class="tag">&lt;/th></span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;th></span>555-1234 <span class="tag">&lt;/th></span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;tr></span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;tr></span></p>
+        <p><span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td></span>555=5678<span class="tag">&lt;/td></span></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;tr></span></p>
+        <p><span class="tag">&lt/table></span></p>
+    </div> 
+
+    <p>Aqui, a célula "Telefone" ocupa duas linhas, enquanto os números aparecem ao lado em linhas separadas.</p>
+
+    <hr>
+
+    <h3>Dicas Importantes</h3>
+
+    <ul>
+        <li>Use <span class="atributo">colspan</span> e <span class="atributo">rowspan</span> com moderação para evitar tabelas confusas.</li>
+        <li>Verifique se o número total de colunas e linhas permanece consistente após usar esses atributos.</li>
+        <li>Combine com CSS para melhorar a aparência e legibilidade da tabela.</li>
+    </ul>
+
+    <a href="col-e-colgroup.html" class="direita">Próximo</a>
+    <a href="tamanho-de-tabelas-html.html" class="esquerda">Anterior</a>
+
+</body>
+</html>
