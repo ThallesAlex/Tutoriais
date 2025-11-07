@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="shortcut icon" href="/VS-code/CSS/imagens.css/favicons/favicon cruz.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/VS-code/CSS/css-do-html.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas Ordenadas</title>
+</head>
+<body>
+    
+    <h1>Listas Ordenadas (<span class="tag">&lt;ol></span>)</h1>
+
+    <p><b>Listas ordenadas</b> são usadas quando a sequencia dos itens é fundamental. Podem representar etapas de um processo, hierarquias, rankings, classificações, agendas, entre outros.</p>
+    <p>Quando renderizadas, cada item é precedido por um número, letra ou outro índice, automaticamente gerado pelo navegador.</p>
+
+    <h2>Estrutura Básica</h2>
+
+    <p>A estrutura mínima de uma lista ordenada é:</p>
+    <div class="exemplo">
+        <h3>HTML</h3>
+        <span class="tag">&lt;ol><br>
+            &nbsp;&nbsp;&nbsp;&lt;li><span>Primeiro passo</span>&lt;/li><br>
+            &nbsp;&nbsp;&nbsp;&lt;li><span>Segundo passo</span>&lt;/li><br>
+            &nbsp;&nbsp;&nbsp;&lt;li><span>Terceiro passo</span>&lt;/li><br>
+            &lt;/ol></span>
+        </span>
+    </div>
+    <p>O navegador exibirá por padrão 1, 2, 3, 4, etc. antes de cada <span class="tag">&lt;li></span></p>
+
+    <div class="exemplo">
+        <h3>HTML</h3>
+        <span class="tag">&lt;ol><br>
+            &nbsp;&nbsp;&nbsp;&lt;li> <span>Abrir o programa</span> &lt;/li><br>
+            &nbsp;&nbsp;&nbsp;&lt;li> <span>Carregar o documento</span>&lt;/li><br>
+            &nbsp;&nbsp;&nbsp;&lt;li> <span>Editar o texto</span>&lt;/li><br>
+            &nbsp;&nbsp;&nbsp;&lt;li> <span>Salver as alterações</span>&lt;/li><br>
+            &lt;/ol></span>
+    </div>
+    <p>Este exemplo deixa claro que a ordem importa, já que cada passo depende da anterior.</p>
+    <hr>
+    
+    <h2>Personalização de marcadores com atributos HTML</h2>
+    <p>O elemento <span class="tag">&lt;ol></span> possui alguns atributos de personalização:</p>
+    <ul>
+        <li><b><span class="atributo">type</span></b>: define o tipo da numeração: números (1, padrão), letras maiúsculas(A), letras minúsculas(a), algarismos romanos maiúsculos(I) ou minúsculos(i).</li>
+        <li><b><span class="atributo">start</span></b>: indica a partir de qual valor a numeração ou senquência começa</li>
+        <li><b><span class="atributo">reversed</span></b>: Inverte a ordem, numerando do maior para o menor.</li>
+    </ul>
+
+    <h3>Exemplos</h3>
+
+    <b>Com letras maiúsculas</b>
+    <div class="exemplo">
+        <h3>HTML</h3>
+        <span class="tag">&lt;ol <span class="atributo">type=</span><span class="valor">"A"</span>><br>
+        &nbsp;&nbsp;&nbsp;&lt;li&gt;<span>Planejamento</span>&lt;/li&gt;<br>
+        &nbsp;&nbsp;&nbsp;&lt;li&gt;<span>Desenvolvimento</span>&lt;/li&gt;<br>
+        &nbsp;&nbsp;&nbsp;&lt;li&gt;<span>Testes</span>&lt;/li&gt;<br>
+        &lt;/ol&gt;
+    </div>
+    <br>
+    <b>Saída:</b>
+    <br>
+
+    <ol type="A">
+        <li>Planejamento</li>
+        <li>Desenvolvimento</li>
+        <li>Testes</li>
+    </ol>
+    <br>
+    
+    <b>Começando do 5</b>
+    <div class="exemplo">
+        <h3>HTML</h3>
+        <span class="tag">&lt;ol <span class="atributo">start=</span><span class="valor">"5"</span>><br>
+        &nbsp;&nbsp;&nbsp;&lt;li&gt;<span>Quinto item</span>&lt;/li&gt;<br>
+        &nbsp;&nbsp;&nbsp;&lt;li&gt;<span>Sexto item</span>&lt;/li&gt;<br>
+        &lt;/ol&gt;
+    </div>
+    <br>
+    <b>Saída</b>
+    <br>
+    <ol>
+        <li>Quinto item</li>
+        <li>Sexto item</li>
+    </ol>
+    <br>
+
+    <b>lista ordenada decrescente</b>
+    <div class="exemplo">
+        <h3>HTML</h3>
+        <br>
+        <span class="tag">&lt;ol <span class="atributo">reversed</span>&gt;<br>
+            &nbsp;&nbsp;&nbsp;&lt;li&gt;<span>Terceiro lugar</span>&lt;/li&gt;<br>
+            &nbsp;&nbsp;&nbsp;&lt;li&gt;<span>Segundo lugar</span>&lt;li&gt;<br>&nbsp;&nbsp;&nbsp;&lt;li&gt;<span>Primeiro</span>&lt;/li&gt;<br>
+         &lt;/ol&gt;</span>
+    </div>
+    <br><b>Saída</b></br>
+    <ol reversed>
+        <li>Terceiro lugar</li>
+        <li>Segundo lugar</li>
+        <li>Primeiro lugar</li>
+    </ol>
+    <em>Você pode combinar <span class="atributo">type <span>,</span> star <span>e</span> reversed</span> para criar listas ainda mais flexíveis</em>
+    <hr>
+
+    <h2>Listas Ordenadas aninhadas e mistas</h2>
+
+    <p>Também é possivel criar listas aninhadas, seja de mesmo tipo ou misturando listas ordenadas e não ordenadas:</p>
+
+    <div class="exemplo">
+        <h3>HTML</h3>
+        <span class="tag">&lt;ol&gt;<br>
+            &nbsp;&nbsp;&nbsp;&lt;li&gt;<span>Introdução</span>&lt;/li&gt;<br>
+            &nbsp;&nbsp;&nbsp;&lt;li&gt;<span>Procedimentos</span><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<span>Verificação inicial</span>&lt/li&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<span>Execução</span>&lt;/li&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+            &nbsp;&nbsp;&nbsp;&lt;/li&gt;<br>
+            &nbsp;&nbsp;&nbsp;&lt;li&gt;<span>Conclusão</span>&lt;/li&gt;<br>
+            &lt;/ol&gt;</span>
+    </div>
+    <br>
+    <b>Saída</b>
+    <ol>
+      <li>Introdução</li>
+      <li>Procedimentos
+        <ul>
+          <li>Verificação inicial</li>
+          <li>Execução</li>
+        </ul>
+      </li>
+      <li>Conclusão</li>
+    </ol>
+
+    <i>Neste exemplo, o segundo item da lista ordenada contém uma sublista não ordenada</i>
+    <hr>
+
+    <h2>Itens de lista numerados individualmente</h2>
+    <p>Além dos atributos de <span class="tag">&lt;ol&gt;</span>, o <span class="tag">&lt;li&gt;</span> aceita o atributo <span class="atributo">value</span> (pricipalmente útil em listas ordenadas), que permite reiniciar o marcador em um número específico para aquele item:</p>
+
+    <div class="exemplo">
+        <h3>HTML</h3>
+        <span class="tag">&lt;ol&gt;<br>
+            &nbsp;&nbsp;&nbsp;&lt;li&gt;<span>Primeiro</span>&lt;/li&gt;<br>
+            &nbsp;&nbsp;&nbsp;&lt;li <span class="atributo">value=</span><span class="valor">"10"</span>&gt;<span>Dez</span>&lt;/li&gt;<br>
+            &nbsp;&nbsp;&nbsp;&lt;li&gt;<span>Onze</span>&lt;/li&gt;<br>
+            &lt;/ol&gt;
+        </span>
+    </div>
+    <br>
+    <b>Saída</b>
+    <br>
+    <ol>
+        <li>Primeiro</li>
+        <li value="10">Dez</li>
+        <li>Onze</li>
+    </ol>
+    <em>O próximo <span class="tag">&lt;li&gt;</span> continua a partir do valor definido anteriormente</em>
+    <hr>
+
+    <a href="listas-nao-ordenada-html.html" class="esquerda">Anterior</a>
+    <a href="listas-de-definicao-HTML.html" class="direita">Próximo</a>
+</body>
+</html>

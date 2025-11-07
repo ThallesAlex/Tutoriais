@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="/VS-code/CSS/css-do-html.css">
+    <link rel="shortcut icon" href="/VS-code/HTML/imagens.html/favicons/favicon-16x16.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas em HTML</title>
+</head>
+<body>
+    
+    <h1>Tabelas em HTML: Estrutura</h1>
+    
+    <hr>
+
+    <h3 title="resumo do que iremos aprender">Introdução</h3>
+
+    <p>Tabelas em HTML são, um recurso fundamental para a apresentação clara, organizada e acessível de dados tabulares na web. Embora durante anos tenham sido(indevidamente) usadas também para layout de páginas, a evolução dos padrões web e das tecnologias de desenvolvimento trouxe refinamento tanto no uso semâmtico das tabelas quanto nos aspectos da acessibilidade, resposnsividade e estilos visuais. Neste guia técnico, você entenderá profundamente como criar, estruturar e estilizar tabelas em HTML, conhecerá boas práticas para acessibilidade e aprenderá a torná-las responsivas em diferentes dispositivos, explorando desde abordagens CSS tradicionais até técnicas modernas com CSS Grid e Flexbox. Além disso, uma tabela comparativa dos elementos essenciais de tabelas HTML oferece referêcia rápida ao final da seção.</p>
+    <hr>
+
+    <h2>Estrutura Básica de Tabelas em HTML</h2>
+
+    <h4>Definição e Contexto de Uso</h4>
+
+    <p>A tabela HTML organiza dados em linhas e colunas, sendo composta por elementos que especificam o escopo de cada parte: a tabela em si, suas linhas, células de cabeçalho, além de seções lógicas como cabeçalho, corpo e rodapé.</p>
+    <p>O uso de tabelas é indicado para apresentação de dados tabulares, como planilhas, horários, listas de produtos e comparações. Para fins de layout, priorize recursos modernos como CSS Grid e Flexbox, mantendo o HTML semâmtico e acessível.</p>
+    
+    <hr>
+    
+    <div class="exemplo">
+        <p>Exemplo de estrutura básica</p>
+
+        <div>
+            <p><span class="tag">&lt;table></span></p>
+            <p><span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;th></span>Nome<span class="tag">&lt;/th></span></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;th></span>Idade<span class="tag">&lt;/th></span></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td></span>Ana<span class="tag">&lt;/td></span></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td></span>28<span class="tag">&lt;/td></span></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td></span>Bruno<span class="tag">&lt;/td></span></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td></span>34<span class="tag">&lt;/td></span></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr></p>
+            <p><span class="tag">&lt;/table></span></p>
+
+        </div>
+
+    </div>
+
+    <p>Neste exemplo, <span class="tag">&lt;table></span> indica o início/fim da tabela. Cada <span class="tag">&lt;tr></span> representa uma linha, <span class="tag">&lt;th></span> é o cabeçalho de uma coluna e <span class="tag">&lt;td></span> contém dados.</p>
+    <p>O domínio dessa estrutura é essencial mesmo para profissionais front-end que usam frameworks ou ferramentas visuais, pois muitos dos princípios reaparecem em conceitos dinâmicos e acessíveis.</p>
+    <hr>
+
+    <h2>Elementos e Atributos Fundamentais das Tabelas</h2>
+
+    <h4>Elementos Principais</h4>
+
+    <table>
+        <tr>
+            <th>Tag</th>
+            <th>Função</th>
+            <th>Uso comum</th>
+        </tr>
+        <tr>
+            <td><span class="tag">&lt;table></span></td>
+            <td>Define o bloco principal da tabela</td>
+            <td>Sempre envolve toda a estrutura</td>
+        </tr>
+        <tr>
+            <td><span class="tag">&lt;tr><br>(table row)</span></td>
+            <td> Cria uma linha</td>
+            <td>Repete-se para cada linha da tabela</td>
+        </tr>
+        <tr>
+            <td><span class="tag">&lt;th></span></td>
+            <td>Título/cabeçalho de coluna ou linha</td>
+            <td>Diferencia visualmente cabeçalhos de dados (é mostrado em negrito)</td>
+        </tr>
+        <tr>
+            <td><span class="tag">&lt;td></span></td>
+            <td>Célula de dados</td>
+            <td>Preenche linhas com dados efetivamente</td>
+        </tr>
+        <tr>
+            <td><span class="tag">&lt;thead></span></td>
+            <td>Agrupa o cabeçalho</td>
+            <td>Facilita navegação por leitores de tela e estilos</td>
+        </tr>
+        <tr>
+            <td><span class="tag">&lt;tbody></span></td>
+            <td>Agrupa o corpo/dados principais</td>
+            <td>Identifica o conteúdo principal de dados de tabela</td>
+        </tr>
+        <tr>
+            <td><span class="tag">&lt;tfoot></span></td>
+            <td>Agrupa o rodapé, geralmente totais/subtotais</td>
+            <td>Permite rodapé repetido em impressões ou fixação</td>
+        </tr>
+        <tr>
+            <td><span class="tag">&lt;caption></span></td>
+            <td>Adiciona legenda/título à tabela</td>
+            <td>Importante para acessibilidade e clareza contextual</td>
+        </tr>
+        <tr>
+            <td><span class="tag">&lt;colgroup></span></td>
+            <td>Cria grupo de colunas para formatação</td>
+            <td>Permite estilizar de forma diferenciada grupos col.</td>
+        </tr>
+        <tr>
+            <td><span class="tag">&lt;col></span></td>
+            <td>Especifica propriedade de uma coluna</td>
+            <td>Geralmente usado dentro de <span class="tag">&lt;colgroup></span></td>
+        </tr>
+    </table>
+
+    <h4>Análise detalhada dos elementos principais:</h4>
+
+    <h2><span class="tag">&lt;table></span></h2>
+    <p>Elemento raiz de qualquer tabela. Todos os demais elementos devem estar dentro dessa tag. Pode receber atributos globais, como classes ou identificadores, úteis ou operações DOM.</p>
+
+    <h2><span class="tag">&lt;tr></span></h2>
+    <p>Cria uma nova linha na tabela. Deve conter <span class="tag">&lt;th></span> ou <span class="tag">&lt;td></span>. Pode ser usado dentro de <span class="tag">&lt;thead></span>, <span class="tag">&lt;tbody></span>, ou <span class="tag">&lt;tfoot></span>, dependendo da seção que representa</p>
+
+    <h2><span class="tag">&lt;th></span></h2>
+    <p>Representa uma célula de cabeçalho. O texto é exibido, por padrão, em negrito e centralizado. Pode receber o atributo <span class="atributo">scope</span> para indicar se é cabeçalho de linha, coluna, grupo de linhas ou colunas, o que melhora a acessibilidade para leitores de tela.</p>
+
+    <h2><span class="tag">&lt;td></span></h2>
+    <p>Representa uma célula de dado na tabela. Usado somente dentro de <span class="tag">&lt;tr></span>. O conteúdo é alinhado à esquerda e exibido em peso normal,  a não ser que seja estilizado com CSS.</p>
+
+    <h2><span class="tag">&lt;thead></span><span class="tag">&lt;tbody></span><span class="tag">&lt;tfoot></span></h2>
+    <p>Usados para dividir semânticamente a tabela em seções: cabeçalho, corpo e rodapé.</p>
+    <p>Facilitam o entendimento do conteúdo por navegadores, leitores de tela e motores de busca. Também são essenciais para aplicação de estilos CSS distintos por seção e para impressão correta de tabelas extensas.</p>
+
+    <h2><span class="tag">&lt;caption></span></h2>
+    <p>Acresenta uma descrição ou título à tabela, imediatamente após a abertura da tag<span class="tag"> &lt;table></span>. Além de ajudar leitores de tela, contribui para a compreensão da função da tabela por todos os usuáros.</p>
+
+    <h2><span class="tag">&lt;col></span> e <span class="tag">&lt;colgroup></span></h2>
+    <p>Permitem agrupar e aplicar estilos (como cor de fundo, largura, borda) a um grupo específico de colunas de modo eficiente, sem nessecidade de definir classe/estilo em cada célula daquela coluna.</p>
+
+
+    <hr>
+    
+    <h2>Boas Práticas para Tabelas: Semântica, Acessibilidade e SEO</h2>
+    <h4>Semântica e Estrutura</h4>
+
+    <p> O HTML semântico é o pilar da acessibilidade e da busca (SEO). Tabelas devem ser usadas exclusivamente para dados tabulares, nunca para layout visual, sob risco de prejudicar tanto acessibilidade quanto posicionamento nos mecanismos de busca.</p><br>
+    
+    <p>Utilize as tags apropriadas para cada parte da tabela:</p>
+
+    <ul>
+        <li><span class="tag">&lt;thead> </span>para linhas de cabeçalho,</li>
+        <li><span class="tag">&lt;tbody> </span>para linhas de dados,</li>
+        <li><span class="tag">&lt;tfoot> </span>para rodapé (totais, notas),</li>
+        <li><span class="tag">&lt;caption> </span>para legendas claras e sucintas</li>
+    </ul>
+
+    <p>Dê preferência às tags semânticas e reforce a estrutura através de atributos, como <span class="atributo">scope</span> no <span class="tag">&lt;th></span>, para indicar explicitamente suas relações com os dados.</p>
+
+    <h2>Boas Práticas de Acessibilidade</h2>
+
+    <p>Tornar tabelas acessíveis vai muito além de visual, envolve garantir navegação correta para tecnologias assistivas (leitores de tela, dispositivos Braile, etc.):</p>
+
+    <ul>
+        <li><b>Use</b> <span class="tag">&lt;caption></span> para fornecer um resumo/título funcional da tabela.</li>
+        <li><b>Use <span class="tag">&lt;th></span> para cabeçalhos,</b> nunca apenas para visual(negrito); leitores de tela dependem dessas tags para identificar o escopo dos dados.</li>
+        <li><b>Aplique o atributo </b><span class="atributo">scope</span> aos <span class="tag">&lt;th></span>(<span class="atributo">scope</span><span class="valor">="col"</span> para colunas,<span class="atributo"> scope</span><span class="valor">="row"</span> para linhas) sempre que sua tabela não for exclusivamente simples.</li>
+        <li><b>Evite células vazias:</b> elas confundem leitores de tela. Caso necessário, utilize <span class="code">&<span class="code">nbsp;</span> para manter a estrutura, mas prefira reorganizar os dados.</li>
+        <li><b>Prefira tabelas simples:</b> quanto mais níveis de aninhamento, mais difícil é a navegação para usuáros com deficiência visual. Se for preciso usar múltiplos cabeçalhos (muitas vezes com <span class="atributo">colspan</span> ou <span class="atributo">rowspan</span>), considere dividir a tabela em menores ou utilizar os atributos <span class="atributo">headers</span> e <span class="atributo">id</span> para associar dados aos cabeçalhos.</li>
+    </ul>
+
+    <div class="exemplo">
+        <h3>Exemplo de Tabela Acessível</h3>
+
+        <div>
+            <p><span class="tag">&lt;table></span></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;caption></span>Vendas Mensais por Região<span class="tag">&lt;/caption></span></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;thead></span></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;tr></span></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;th</span> <span class="atributo">scope="col"></span>Região<span class="tag">&lt;/th></span></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;th</span> <span class="atributo">scope="col"></span>Vendas (R$)<span class="tag">&lt;/th></span></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/tr></span></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/thead></span></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;tbody></span></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;tr<span class="atributo"> scope</span>=<span class="valor">"row"</span>></span></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td></span>Norte<span class="tag">&lt;/td></span></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td></span>15000<span class="tag">&lt;/td></span></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/tr></span></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;tr></span></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td<span class="atributo"> scope</span>=<span class="valor">"row"</span>></span></span>Sul<span class="tag">&lt;/td></span></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;td></span>20000<span class="tag">&lt;/td></span></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/tr></span></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">&lt;/tbody></span></p>
+            <p><span class="tag">&lt;/table></span></p>
+        </div>
+    </div>
+
+    <p>Neste exemplo, fica claro o escopo dos cabeçalhos tanto para linhas quanto para colunas, o que é fundamental para leitores de tela e recursos de acessibilidade.</p>
+
+    <h2>Tabelas simples x Tabelas complexas</h2>
+
+    <p>- Prefira tabelas simples. Em casos de tabelas complexas, utilize atributos como <span class="atributo">headers</span> e <span class="atributo">id</span>. Dividir o conteúdo em várias tabelas menores pode melhorar tanto a compreensão visual quanto a acessibilidade.</p>
+
+    <hr>
+
+    <a href="bordas-de-tabelas-HTML.html" class="direita">Próximo</a>
+    <a href="titulo-da-pagina.html" class="esquerda">Anterior</a>
+    </body>
+    </html>
