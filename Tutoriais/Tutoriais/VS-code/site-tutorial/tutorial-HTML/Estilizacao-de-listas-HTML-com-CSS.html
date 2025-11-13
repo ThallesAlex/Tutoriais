@@ -110,7 +110,7 @@
     <p>Ou, para listas mais criativas:</p>
     <div class="exemplo">
         <h3>CSS</h3>
-        <br><span class="seletor">li::marker </span><span class="chave">{</span><br><span class="propriedadde">&nbsp;content: </span><span class="valor">url (icone.svg);</span><br>
+        <br><span class="seletor">li::marker </span><span class="chave">{</span><br><span class="propriedade">&nbsp;content: </span><span class="valor">url (icone.svg);</span><br>
         <span class="chave">}</span>
     </div>
     <em>O pseudo-elemento <span class="seletor">::marker</span> é compatível com a maioria dos navegadores modernos e permite estilização direcionada apenas ao marcador, sem afetar o restante do item</em><hr>
@@ -191,6 +191,62 @@
     <span class="tag">&lt;section <span class="atributo">aria-labelledby=</span><span class="valor">"faq"</span>&gt;<br>&nbsp;&nbsp;&nbsp;&lt;h2&gt; <span class="atributo">id=<span class="valor">"faq"</span></span>&gt;<span>Perguntas Frequentes</span>&lt;/h2&gt; <br> &nbsp;&nbsp;&nbsp;&lt;dl&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;dt&gt;<span>Como faço login?</span>&lt;/dt&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt;<span>Utilize seu e-mail e senha cadastrados.</span>&lt;/dd&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;dt&gt;<span>Esqueci minha senha!</span>&lt;/dt&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt;<span>Clique em "Esqueci minha senha" na página de login.</span>&lt;/dd&gt;<br>&nbsp;&nbsp;&nbsp;&lt;/dl&gt;<br>&lt;/section&gt;
     </span>
     </div>
-    p{O uso adequado de etiquetas como <span class="tag">&lt;ol&gt;</span>, <span class="tag">&lt;ul&gt;</span>, <span class="tag">&lt;section&gt;</span>, <span class="tag">&lt;aria-labelledby&gt;</span> e <span class="tag">&lt;main&gt;</span> }
+    <p>O uso adequado de etiquetas como <span class="tag">&lt;ol&gt;</span>, <span class="tag">&lt;ul&gt;</span>, <span class="tag">&lt;section&gt;</span>, <span class="tag">&lt;aria-labelledby&gt;</span> e <span class="tag">&lt;main&gt;</span> comunica ao navegador, tecnologias assistivas e motores de busca exatamante a funcão de cada parte do conteúdo</p>
+    <hr>
+    <h2>Exemplos Avançados de Estilização</h2>
+    <h3>Removendo marcadores para criar menus horizontais</h3>
+    <div class="exemplo">
+        <h3>CSS</h3>
+        <br><span class="seletor">.menu-horizontal </span><span class="chave">{</span><br>
+            <span class="propriedade">list-style: </span><span class="valor">none;</span><br>
+            <span class="propriedade">padding: </span><span class="valor">0;</span><br>
+            <span class="propriedade">display: </span><span class="valor">flex;</span><br>
+            <span class="propriedade">gap: </span><span class="valor">1em</span><br>
+            <span class="chave">}</span><br>
+            <span class="seletor">.menu-horizontal li a </span><span class="chave">{</span><br>
+            <span class="propriedade">text-decoration:</span><span class="valor"> none;</span><br>
+            <span class="propriedade">color: </span><span class="valor"> #2b2b2b;</span><br>
+            <span class="propriedade">font-weight: </span><span class="valor">bold;</span><br>
+            <span class="propriedade">padding: </span><span class="valor">6px 12px;</span><br>
+            <span class="chave">}</span><br>
+            <span class="seletor">.menu-horizontal li a:hover </span><span class="chave">{</span><br>
+            <span class="propriedade">background-color: </span><span class="valor"> #eaeaea;</span><br>
+            <span class="propriedade">border-radius: </span><span class="valor">5px;</span><br>
+            <span class="chave">}</span>
+        </div>
+        <p>Com esse CSS, uma lista não ordenada vira um menu horizontal moderno</p>
+        <hr>
+        <h3>Personalizando marcadores com imagens</h3>
+        <div class="exemplo">
+            <h3>CSS</h3>
+            <br><span class="seletor">ul.custon-icons </span><span class="chave"></span><br><span class="propriedade">list-style-image: </span><span class="valor"> url('imagen.png');</span><br><span class="propriedade">padding-left: </span><span class="valor">32px;</span><br><span class="chave"></span></div>
+        <p>Ou usando pseudo-elemento para controle total:</p>
+        <div class="exemplo">
+            <h3>CSS</h3>
+            <br><span class="seletor">ul.custon li </span><span class="chave"></span><br><span class="propriedade">list-style: </span><span class="valor">none;</span><br><span class="propriedade">position:</span><span class="valor"> relative;</span><br><span class="propriedade">padding-left: </span><span class="valor">32px;</span><br><span class="chave"></span><br><span class="seletor">ul.custon li::before </span><span class="chave"></span><br><span class="propriedade">content: </span><span class="valor">"";</span><br><span class="propriedade">position: </span><span class="valor">absolute;</span><br><span class="propriedade">left: </span><span class="valor">0;</span><br><span class="propriedade">width: </span><span class="valor">24px;</span><br><span class="propriedade">height: </span><span class="valor">24px;</span><br><span class="propriedade">background-image: </span><span class="valor"> url('imagen.png');</span><br><span class="propriedade">background-size: </span><span class="valor">cover;</span><br><span class="chave"></span>
+        </div>
+        <p>Assim, é possível definir tamanho, posição e até animar marcadores.</p>
+        <hr>
+        <h3>Estilizando <span class="tag">&lt;dl&gt;</span> para apresentar uma FAQ</h3>
+        <div class="exemplo">
+            <h3>CSS</h3>
+            <br><span class="seletor">dl.faq dl </span><span class="chave"></span><br>
+            <span class="propriedade">font-weight: </span><span class="valor">bold;</span><br><span class="propriedade">margin-top: </span><span class="valor">10px;</span><br><span class="chave"></span><br><span class="seletor">dl.faq dd </span><span class="chave"></span><br><span class="propriedade">margin-left: </span><span class="valor">20px;</span><br><span class="propriedade">margin-botton: </span><span class="valor">10px;</span><br><span class="chave"></span>
+            <p>O FAQ fica mais legível, com espaçãmento apropriado entre as perguntas e respostas</p>
+            <hr>
+            <h2>Dicas Extras</h2>
+            <ul>
+                <li>Listas podem conter outros elementos HTML em seus itens, inclusive imagens, parágrafos ou outras listas aninhasdas, expandindo bastante as possibilidade estruturais.</li>
+                <li>Listas são largamente empregadas em menus, sumãrios, tabelas de contato, rankings, checklists, timelines, FAQs, blocos de especificações, entre outros.</li>
+                <li>Ao analisar listas, cuidade para não criar níveis muito profindos, pois isso pode dificultar a navegação e a compreensão para usuários com deficiência visual</li>
+            </ul>
+        </div>
+        <hr>
+        <h2>Conclusão</h2>
+        <p>Dominar as listas em HTML é fundamental para estruturar páginas web claras, acessíveis e profissionais. Não se trata apenas de exibir “bullets” ou números, mas de transmitir à máquina — e ao usuário — o significado real de cada agrupamento de itens, seguindo os princípios do <b>HTML semântico</b>. Ao usar as tags corretas (<span class="tag">&lt;ul&gt;</span>, <span class="tag">&lt;ol&gt;</span>, <span class="tag">&lt;dl&gt;</span>, <span class="tag">&lt;li&gt;</span><span class="tag">&lt;dl&gt;</span>, <span class="tag">&lt;dd&gt;</span>) e aplicar estilização apropriada com CSS, você garante tanto uma apresentação visual atraente quanto uma navegação acessível.</p>
+        <p>Adotando boas práticas, seu código será mais facilmente compreendido, mantido, indexado e utilizado por todos — inclusive usuários de leitores de tela e buscadores. Ao escolher conscientemente entre listas ordenadas, não ordenadas e de definição, e compreender seu papel semântico, você dará um passo importante para se tornar um desenvolvedor web mais completo.</p>
+
+        <a href="listas-de-definicao-HTML.html" class="esquerda">Anterior</a>
+        <a href="Elementos-de-bloco-e-de-inline.html" class="direita">Próximo</a>
 </body>
 </html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="shortcut icon" href="../imagens do tutorial/ico/favicon cruz.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css-do-tutorial.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div e Span</title>
+</head>
+<body>
+    <h1>Div e Span</h1>
+    <b>Os elementos <span class="tag">&lt;div&gt;</span> e <span class="tag">&lt;span&gt;</span> são usadas para agrupar e organizar conteúdo HTML, mas têm propósitos diferentes: <span class="tag">&lt;div&gt;</span> é para blocos e <span class="tag">&lt;span&gt;</span> para trechos em linha.</b>
+    <hr>
+    <section>
+        <h1><span class="tag">&lt;div&gt;</span> - Elemento de Bloco</h1>
+        <ul>
+            <li><b>Função principal</b>: Agrupar elemenetos em nível de bloco.</li>
+            <li><b>Comportamento</b>: Ocupa toda a largura disponível, inicíado em uma nova linha.</li>
+            <li><b>Uso comum</b>: Estruturar seções da pagina como cabeçalhos, rodapés, colunas, caixas de conteúdo.</li>
+            <li><b>Pode conter</b>: Parágrafos, listas, imagens, outros <span class="tag">&lt;div&gt;</span>, etc.</li>
+        </ul>
+        <h4>Exemplo</h4>
+        <div class="exemplo">
+            <h3>HTML</h3>
+            <span class="tag">&lt;div <span class="atributo"> class=</span><span class="valor">"seção-pricipal"</span>&gt;</span><br>
+            <span class="tag">&lt;h1&gt;<span>Bem vindo</span>&lt;/h1&gt;</span><br>
+            <span class="tag">&lt;p&gt;<span>Este é o conteúdo da seção</span>&lt;/p&gt;</span><br>
+            <span class="tag">&lt;/div&gt;</span>
+        </div>
+    </section>
+    <hr>
+    <section>
+        <h1><span class="tag">&lt;span&gt;</span> - Elemento em linha</h1>
+        <ul>
+            <li><b>Função principal</b>: Agrupar conteúdo fraseado dentro de uma linha.</li>
+            <li><b>Conportamento</b>: Não quebra linha, se comporta como parte do texto. </li>
+            <li><b>Uso comum</b>: Aplicar estilos ou identificar partes específicas de um texto.</li>
+            <li><b>Pode conter</b>: Texto e elementos em linha como <span class="tag">&lt;a&gt;</span><span class="tag">&lt;strong&gt;</span>, etc.</li>
+        </ul>
+        <h3>Exemplo</h3>
+        <div class="exemplo">
+            <h3>HTML</h3>
+            <span class="tag"></span>
+            &lt;p&gt;<span>Este é um <span class="tag">&lt;span <span class="atributo">class=<span class="valor">"destaque"</span><span>texto destacado</span></span>&lt;/span&gt;</span>  <span>dentro do parágrafo.</span></span>
+            </div>
+    </section>
+    <hr>
+    <h2>Diferençãs principais</h2>
+    <table>
+        <tr>
+            <th>Características</th>
+            <th class="tag">div</th>
+            <th class="tag">span</th>
+        </tr>
+        <tr>
+            <th>Tipo de elemento</th>
+            <td>Bloco</td>
+            <td>Em linha</td>
+        </tr>
+        <tr>
+            <th>Quebra de linha</th>
+            <td>Sim</td>
+            <td>Não</td>
+        </tr>
+        <tr>
+            <th>Uso típico</th>
+            <td>Estrutura de layout</td>
+            <td>Estilização de texto</td>
+        </tr>
+        <tr>
+            <th>Pode conter</th>
+            <th>Elementos de bloco e em linha</th>
+            <td>Apenas elementos em linha</td>
+        </tr>
+    </table>
+    <hr>
+    <h2>Aplicações com CSS</h2>
+    <p>Ambos são frequentemente usados com classes ou IDs para aplicar estilos:</p>
+    <div class="exemplo">
+        <h3>HTML</h3>
+        <span class="tag">&lt;div</span><span class="atributo"> id=</span><span class="valor">"conteiner"</span><span class="atributo"> class=</span><span class="valor">"box"</span><span class="tag">&gt;</span><br><span class="tag">&lt;span</span><span class="atributo"> class=</span><span class="valor">"negrito"</span><span class="tag">&gt;</span><span>Texto</span><span class="tag">&lt;/span&gt;</span>
+    </div>
+    <br>
+    <div class="exemplo">
+        <h3>CSS</h3>
+        <span class="seletor">.box</span><span class="chave"></span><br><span class="propriedade">backgroud-colo:</span><span class="valor"> #f0f0f0;</span><br><span class="propriedade">padding: </span><span class="valor">20px;</span><br><span class="chave"></span><br><span class="seletor">.negrito </span><span class="chave"></span><br><span class="propriedade">font-weight: </span><span class="valor">bold;</span><br><span class="chave"></span>
+    </div>
+    <hr>
+    <a href="Estilizacao-de-listas-HTML-com-CSS.html" class="esquerda">Anterior</a>
+    <a href="Classes-HTML.html" class="direita">Próximo</a>
+</body>
+</html>
