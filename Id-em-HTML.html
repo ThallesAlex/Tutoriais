@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="shortcut icon" href="../imagens do tutorial/ico/favicon cruz.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css-do-tutorial.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ids HTML</title>
+</head>
+<body>
+    <h1>Ids - HTML</h1>
+    <b>O atributo<span class="atributo"> id</span> em HTML serve para identificar de forma única um elemento dentro de uma página. Ele é essencial para aplicar estilos com CSS, manipular elementos com JavaScript e criar âncoras para navegação</b>
+    <hr>
+    <section>
+        <h2>O que é o atributo<span class="atributo"> id</span>?</h2>
+        <ul>
+            <li><b>Definição</b>: o<span class="atributo"> id</span> é um atributo global que atribui um<i> identificador único </i>a um elemento HTML</li>
+            <li><b>Unicidade </b>: Cada <span class="atributo">id </span>deve ser exclusivo dentro do documento - não pode haver dois elementos com o mesmo <span class="atributo">id </span></li>
+        </ul>
+        <hr>
+        <h2>Sintaxe</h2>
+        <div class="exemplo">
+            <h3>HTML</h3>
+            <br>
+            <p><span class="tag">&lt;div <span class="atributo"> id=</span><span class="valor">"meuElemento"</span>&gt;</span>Conteúdo aqui<span class="tag">&lt;/div&gt;</span></p>
+        </div>
+        <ul>
+            <li>O valor do <span class="atributo">id </span>deve ser uma linha sem espaços</li>
+            <li>Evite usar caracteres espaciais ou iniciar com números</li>
+        </ul>
+        <h2>Usos comuns<span class="atributo"> id</span></h2>
+        <ul>
+            <li>
+                <h3>Estilização com CSS</h3>
+                <p>Você pode aplicar estilos específicos a um elemento com<span class="atributo"> id</span>:</p>
+                <div class="exemplo"><br>
+                    <span class="tag">&lt;style&gt;</span><br><span class="seletor"> &nbsp;&nbsp;&nbsp;#meuElemento</span><span class="chave"> {</span><br><span class="propriedade">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:</span><span class="valor"> blue;</span><br><span class="propriedade filho">background-color:</span><span class="valor"> yellow;</span><br><span class="chave">}</span><br><span class="tag">&lt;/style&gt</span>
+                </li>
+                <li><h3>Manipulação com JavaScript</h3>
+                    <p>Permite selecionar e modificar elementos:</p>
+                    <div class="exemplo">
+                    <h3>HTML</h3>
+                    <br><span class="tag">&lt;script&gt;</span><br><span class="filho">document.</span><span class="">geiElementById(<span class="valor">"meuElemento"</span>).</span><span class="">innerText = </span><span class="valor">"Texto alterado!";</span><br><span class="tag">&lt;script&gt;</span>
+                </div>
+            </li>
+            <li>
+                <h3>Navegação por âncoras</h3>
+                <p>Crie links que levam diretamente a uma seção da página:</p>
+                <div class="exemplo">
+                    <h3>HTML</h3>
+                    <p><span class="tag">&lt;a</span><span class="atributo"> href=</span><span class="valor">"#meuElemento"</span>Ir para a seção<span class="tag">&lt;/a&gt</span></p>
+                    <p><span class="tag">&lt;div<span class="atributo"> id=</span><span class="valor">"maeuElementos"</span></span>Seção de destino<span class="tag">&lt;/div&gt;;</span></p>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <hr>
+    <h2>Boas Práticas</h2>
+    <ul>
+        <li>Use<span class="atributo"> id</span> apenas quando realmente precisar identificar um elemento de forma única</li>
+        <li>Prefira <span class="atributo">class</span> para estilos em múltiplos elementos.</li>
+        <li>Mantenha nomes de <span class="atributo">id</span> descritivos e consistentes.</li>
+    </ul>
+    <a href="Classes-HTML.html" class="esquerda">Anterior</a><a href="iframes-HTML.html" class="direita">Próximo</a>
+</html>

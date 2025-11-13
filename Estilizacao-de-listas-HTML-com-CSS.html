@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="../css-do-tutorial.css">
+    <link rel="shortcut icon" href="../imagens do tutorial/ico/favicon cruz.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como Estilizar Listas Usando CSS</title>
+</head>
+<body>
+    
+    <h1>Como Estilizar Listas Usando CSS</h1>
+
+    <p>A aparência padrão das listas é simples, mas o CSS permite uma ampla gama de personalizações, tanto para o estilo dos marcadores quanto para disposição, cores, imagens e interações.</p>
+    
+    <h2>Propriedades principais para listas</h2>
+
+    <ul>
+        <li><span class="tag">list-style-type</span>: Define o tipo dee marcador de uma lista</li>
+        <li><span class="tag">list-style-image</span>: Usa uma imagem como marcador.</li>
+        <li><span class="tag">list-style-position</span>: Controla onde o marcador é posicionado em relação ao texto.</li>
+        <li><span class="tag">list-style</span>: Shorthand para combinar as três propriedades acima</li>
+    </ul>
+
+    <h3>Exemplos de uso:</h3>
+
+    <b>Altera o tipo de marcador de uma lista não ordenada</b>
+
+    <div class="exemplo">
+        <h3>CSS</h3>
+        <br><span class="seletor">ul</span>
+        <spam class="chave">{</spam>
+        <br><span class="propriedade">list-style-type: </span><span class="valor">square; </span><span class="comentario">/* opções: disc, circle, square</span><br>
+        <spam class="chave">}</spam>
+    </div>
+
+    <br>
+
+    <b>Lista ordenada com numeração romana</b>
+
+    <div class="exemplo">
+        <h3>CSS</h3>
+        <br><span class="seletor">ol</span>
+        <spam class="chave">{</spam>
+        <br><span class="propriedade">list-style-type: </span><span class="valor">upper-roman; </span><span class="comentario">/* opções: decimal, lower-alpha, upper-alpha, lower-roman, etc. */</span><br>
+        <spam class="chave">}</spam>
+    </div>
+
+    <br>
+
+    <b>Usando umagem personalizada como marcador</b>
+
+    <div class="exemplo">
+        <h3>CSS</h3>
+        <br><span class="seletor">ul</span>
+        <spam class="chave">{</spam>
+        <br><span class="propriedade">list-style-image: </span><span class="valor">url('icone.png'); </span><br>
+        <spam class="chave">}</spam>
+    </div>
+
+    <ol class="ListaComMarcadorCruz">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ol>
+    <p><i>Dica</i>: Sempre defina também um <span class="propriedade">list-style-type</span> como fallback para caso da imagem não ser carregada</p>
+
+    <b>Posição dos marcadores</b>
+    <div class="exemplo">
+        <h3>CSS</h3>
+        <span class="seletor">ul</span><span class="chave">{</span><br><span class="propriedade">list-style-position:</span><span class="valor">inside;</span><span class="comentario">/* ou outside(padrão)*/</span><br><span class="chave">}</span>
+    </div>
+    <ul>
+        <li><span class="valor">outside</span> : marcador fica à esquerda do bloco do item.</li>
+        <li><span class="valor">inside</span>  : marcador fica dentro do bloco, alinhando em uma única linha ao texto.</li>
+    </ul>
+
+    <b>Propriedade <span class="propriedade">list-style</span> (shorthand)</b>
+    <p>Você pode definir o tipo, posição e imagem em uma única linha:</p>
+    <div class="exemplo">
+        <h3>CSS</h3>
+        <span class="seletor">ul </span><span class="chave">{<br></span>&nbsp;&nbsp;&nbsp;<span class="propriedade">list-style: </span><span class="valor">square inside url('icone.png');</span>
+        <br><span class="chave">}</span>
+    </div>
+
+    <b>Remover marcadores</b>
+    <div class="exemplo">
+        <h3>CSS</h3>
+        <br><span class="seletor">ul </span><span class="chave">{</span><br>&nbsp;&nbsp;&nbsp;<span class="propriedade">list-style: </span><span class="valor">none;</span><br>&nbsp;&nbsp;&nbsp;<span class="propriedade">margim: </span><span class="valor">0;</span><br>&nbsp;&nbsp;&nbsp;<span class="propriedade">padding: </span><span class="valor">0;</span><br><span class="chave">}</span>
+    </div>
+    <p>Assim, todos os marcadores desaparecem e cada item pode ser estilizado individualmente</p>
+    <hr>
+
+    <h2>Customização Avançada: <span class="seletor">::marker</span> e pseudo-elementos</h2>
+
+    <p>Com CSS moderno, é possível personalizar a cor, o tamanho, e até o conteúdo dos marcadores de lista com pseudo-elemento <span class="seletor">::marker</span>:</p>
+
+    <div class="exemplo">
+        <h3>CSS</h3>
+        <br><span class="seletor">li::marker </span><span class="chave">{</span>
+        <br><span class="propriedade">&nbsp;&nbsp;&nbsp;color: </span><span class="valor">hotpink;</span><br><span class="propriedade">&nbsp;&nbsp;&nbsp;font-size: </span><span class="valor">1.5em;</span><br><span class="propriedade">&nbsp;&nbsp;&nbsp;content: </span><span class="valor">"→"; </span><span class="comentario">/* Adiciona seta como marcador */</span><br><span class="chave">}</span>
+    </div>
+
+    <ul>
+        <li class="marcadorSetaEsquerda">item 1</li>    
+        <li class="marcadorSetaEsquerda">item 2</li>
+        <li class="marcadorSetaEsquerda">item 3</li>
+    </ul>
+    
+    <p>Ou, para listas mais criativas:</p>
+    <div class="exemplo">
+        <h3>CSS</h3>
+        <br><span class="seletor">li::marker </span><span class="chave">{</span><br><span class="propriedade">&nbsp;content: </span><span class="valor">url (icone.svg);</span><br>
+        <span class="chave">}</span>
+    </div>
+    <em>O pseudo-elemento <span class="seletor">::marker</span> é compatível com a maioria dos navegadores modernos e permite estilização direcionada apenas ao marcador, sem afetar o restante do item</em><hr>
+
+    <h2>Acessibllidade, Semântica e Boas Práticas em Listas HTML</h2>
+    <p> A estrutura semântica correta - usando <span class="tag">&lt;ul&gt;</span>, <span class="tag">&lt;ol&gt;</span>, <span class="tag">&lt;li&gt;</span>, <span class="tag">&lt;dl&gt;</span>, <span class="tag">&lt;dt&gt;</span> e <span class="tag">&lt;dd&gt;</span> conforme o propósito - garante que leitores de tela e outras tecnologias assistivas interpretem listas de modo ideal. Isso proporciona:</p>
+    <ul>
+        <li><i>Leitura sequencial e lógica</i>: leitores de tela anunciam quando uma lista começa, a quantidade de itens e o conteúdo de cada item.</li>
+        <li><i>Navegação eficiente</i>: usuários podem saltar para lista rapidamente usando comandos do leitor de tela</li>
+        <li><i>Compatibilidade universal</i>: mecanismos dee busca entendem a hierarquia do conteúdo e melhoram o SEO do site</li>
+    </ul>
+
+    <h3>Exemplos de boas práticas</h3>
+
+    <b>
+        <strong>
+            <ul>
+                <li>Use  <span class="tag">&lt;ul&gt;</span> para grupos de links, menus ou agrupamentos genéricos</li>
+                <li>Use <span class="tag">&lt;ol&gt;</span> para etapas, processos, índices ou listas em que a ordem/importância importa</li>
+                <li>Use <span class="tag">&lt;dl&gt;</span> para glossários, FAQs, propriedades de objeto e metadados</li>
+                <li>Evite criar listas usando apenas <span class="tag">&lt;div&gt;</span> e <span class="tag">&lt;span&gt;</span>, pois não fornecem significado ao conteúdo</li>
+                <li>Inclua textos claros e evite termos genéricos como "Clique aqui" em menus ou listas para melhor experiência de uso</li>
+            </ul>
+        </strong>
+    </b>
+
+    <h3>Boas práticas para menus</h3>
+    <p>Menus de navegação devem ser listados em <span class="tag">&lt;ul&gt;</span>, com cada link em um <span class="tag">&lt;li&gt;</span>. Para indicar um menu à tecnologia assitiva, coloque-o dentro de uma tag <span class="tag">nav</span>. Se remover os marcadores usando CSS adicione o atributo <span class="atributo">role= <span class="valor">"list"</span> </span>  para garantir o reconhecimento semântico em alguns navegadores:</p>
+
+    <div class="exemplo">
+        <h3>HTML</h3>
+        <span class="tag">&lt;nav&gt;<br>&nbsp;&nbsp;&nbsp;&lt;ul <span class="atributo">role=</span><span class="valor">"list"</span>&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a <span class="atributo">herf=<span class="valor">"destino do link"</span></span>&gt;<span>Home</span>&lt;a/&gt&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a <span class="atributo">herf=<span class="valor">"destino do link"</span></span>&gt;<span>Serviços</span>&lt;a/&gt&lt;/li&gt;<br>&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>&lt;/nav&gt;</span>
+    </div>
+    <em>Em navegadores como Safari, listas estilizadas sem marcadores podem não ser reconhecidos pelo leitor de tela sem o atributo <span class="atributo">role</span></em>
+    <hr>
+    
+    <h2>Listas de descrição e acessibildade</h2>
+    <P>Em <span class="tag">&lt;dl&gt;</span>, o uso consiente de <span class="tag">&lt;dt&gt;</span> e <span class="tag">&lt;dd&gt;</span> matém a relaão semântica clara, ajudando leitores de tela a apresentar termos e suas definições de forma adequada.</P>
+    <em>Evite utilizar <span class="tag">&lt;dl&gt;</span> apenas para recuo visual ou formatação. Use-a sempre para representar pares de termo/descrição.</em>
+    <hr>
+    
+    <h2>ARIA e listas HTML</h2>
+    <p>A WAI-ARIA formece atributos e papéis que podem complementar a semântica padrão do HTML, por exemplo:</p>
+    <ul>
+        <li><span class="atributo">role=</span><span class="valor">"list"</span>: força o reconhecimento da lista como tal</li>
+        <li><span class="tag">aria-label</span>, <span class="tag">aria-labelledby</span>, <span class="tag">aria-describedby</span>: adicionam acessíveis para listas complexas</li>
+        <li>Considerar ARIA <i>apenaa</i> quando não for possível usar semântica HTML adequada</li>
+    </ul>
+    <hr>
+    <h2>Dicas de acessibilidade práticas</h2>
+    <ul>
+        <li><b>Menus e listas de navegação:</b> sempre use <span class="tag">&lt;nav&gt;</span> para envolver listas de links principais.</li>
+        <li><b>Formulários:</b> rótulos  claros nos campos e listas auxiliares para instruções (ex: <span class="tag">&lt;ul&gt;</span> com instruções de preenchimento).</li>
+        <li><b>Textos alternativos:</b> se usar imagens como marcadores, cetifique-se de não remover a informação de contexto do marcador para leitores de tela.</li>
+        <li><b>Contraste e legibilidade:</b> ao estilizar listas, mantenha um alto contraste e legibilidade dos itens, especialmente para usuários com deficiência visual.</li>
+    </ul>
+    <hr>
+    <h2>Boas Práticas de Semântica e Organização</h2>
+    <b>Importância do HTML semântico</b>
+    <p>HTML semântico melhora:</p>
+    <ul>
+        <li><b>Experiência do usuário:</b> páginas bem estruturadas são mais fáceis de navegar e entender, especialmente com leitores de tela.</li>
+        <li><b>SEO</b> mecanismos de busca priorizam páginas com estrutura semântica clara, melhorando o ranqueamento e a visibilidade do site</li>
+        <li><b>Manutenção:</b> facilita atualizações e entendimento pro outros desenvolvedores</li>
+    </ul>
+    <h3>Exemplos de má prática</h3>
+    <ul>
+        <li><i>Usar apenas <span class="tag">&lt;div&gt;</span> e <span class="tag">&lt;span&gt;</span> para criar listas:</i> prejudica a acessibilidade e a compreensão semântica</li>
+        <li><i>Colocar listas de títulos ou informações sem usar as tags apropriadas:</i> dificulta navegação e indexação</li>
+    </ul>
+    <h3>Exemplo correto de uso semântico</h3>
+    <div class="exemplo">
+        <h3>HTML</h3> <span class="tag">&lt;main&gt; <br> &nbsp;&nbsp;&nbsp;&lt;h2&gt;<span>Passos para cadastro</span>&lt;/h2&gt; <br> &nbsp;&nbsp;&nbsp;&lt;ol&gt; <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<span>Preencha o formulário</span>&lt;/li&gt; <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<span>Confirme o e-mail</span>&lt;/li&gt; <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;<span>Acesse sua conta</span>&lt;/conta&gt; <br> &nbsp;&nbsp;&nbsp;&lt;/ol&gt; <br> &lt;/main&gt;</span>
+    </div>
+    <p>Exemplo de uma FAQ com lista de definição</p>
+    <div class="exemplo">
+    <h3>HTML</h3>
+    <span class="tag">&lt;section <span class="atributo">aria-labelledby=</span><span class="valor">"faq"</span>&gt;<br>&nbsp;&nbsp;&nbsp;&lt;h2&gt; <span class="atributo">id=<span class="valor">"faq"</span></span>&gt;<span>Perguntas Frequentes</span>&lt;/h2&gt; <br> &nbsp;&nbsp;&nbsp;&lt;dl&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;dt&gt;<span>Como faço login?</span>&lt;/dt&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt;<span>Utilize seu e-mail e senha cadastrados.</span>&lt;/dd&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;dt&gt;<span>Esqueci minha senha!</span>&lt;/dt&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt;<span>Clique em "Esqueci minha senha" na página de login.</span>&lt;/dd&gt;<br>&nbsp;&nbsp;&nbsp;&lt;/dl&gt;<br>&lt;/section&gt;
+    </span>
+    </div>
+    <p>O uso adequado de etiquetas como <span class="tag">&lt;ol&gt;</span>, <span class="tag">&lt;ul&gt;</span>, <span class="tag">&lt;section&gt;</span>, <span class="tag">&lt;aria-labelledby&gt;</span> e <span class="tag">&lt;main&gt;</span> comunica ao navegador, tecnologias assistivas e motores de busca exatamante a funcão de cada parte do conteúdo</p>
+    <hr>
+    <h2>Exemplos Avançados de Estilização</h2>
+    <h3>Removendo marcadores para criar menus horizontais</h3>
+    <div class="exemplo">
+        <h3>CSS</h3>
+        <br><span class="seletor">.menu-horizontal </span><span class="chave">{</span><br>
+            <span class="propriedade">list-style: </span><span class="valor">none;</span><br>
+            <span class="propriedade">padding: </span><span class="valor">0;</span><br>
+            <span class="propriedade">display: </span><span class="valor">flex;</span><br>
+            <span class="propriedade">gap: </span><span class="valor">1em</span><br>
+            <span class="chave">}</span><br>
+            <span class="seletor">.menu-horizontal li a </span><span class="chave">{</span><br>
+            <span class="propriedade">text-decoration:</span><span class="valor"> none;</span><br>
+            <span class="propriedade">color: </span><span class="valor"> #2b2b2b;</span><br>
+            <span class="propriedade">font-weight: </span><span class="valor">bold;</span><br>
+            <span class="propriedade">padding: </span><span class="valor">6px 12px;</span><br>
+            <span class="chave">}</span><br>
+            <span class="seletor">.menu-horizontal li a:hover </span><span class="chave">{</span><br>
+            <span class="propriedade">background-color: </span><span class="valor"> #eaeaea;</span><br>
+            <span class="propriedade">border-radius: </span><span class="valor">5px;</span><br>
+            <span class="chave">}</span>
+        </div>
+        <p>Com esse CSS, uma lista não ordenada vira um menu horizontal moderno</p>
+        <hr>
+        <h3>Personalizando marcadores com imagens</h3>
+        <div class="exemplo">
+            <h3>CSS</h3>
+            <br><span class="seletor">ul.custon-icons </span><span class="chave"></span><br><span class="propriedade">list-style-image: </span><span class="valor"> url('imagen.png');</span><br><span class="propriedade">padding-left: </span><span class="valor">32px;</span><br><span class="chave"></span></div>
+        <p>Ou usando pseudo-elemento para controle total:</p>
+        <div class="exemplo">
+            <h3>CSS</h3>
+            <br><span class="seletor">ul.custon li </span><span class="chave"></span><br><span class="propriedade">list-style: </span><span class="valor">none;</span><br><span class="propriedade">position:</span><span class="valor"> relative;</span><br><span class="propriedade">padding-left: </span><span class="valor">32px;</span><br><span class="chave"></span><br><span class="seletor">ul.custon li::before </span><span class="chave"></span><br><span class="propriedade">content: </span><span class="valor">"";</span><br><span class="propriedade">position: </span><span class="valor">absolute;</span><br><span class="propriedade">left: </span><span class="valor">0;</span><br><span class="propriedade">width: </span><span class="valor">24px;</span><br><span class="propriedade">height: </span><span class="valor">24px;</span><br><span class="propriedade">background-image: </span><span class="valor"> url('imagen.png');</span><br><span class="propriedade">background-size: </span><span class="valor">cover;</span><br><span class="chave"></span>
+        </div>
+        <p>Assim, é possível definir tamanho, posição e até animar marcadores.</p>
+        <hr>
+        <h3>Estilizando <span class="tag">&lt;dl&gt;</span> para apresentar uma FAQ</h3>
+        <div class="exemplo">
+            <h3>CSS</h3>
+            <br><span class="seletor">dl.faq dl </span><span class="chave"></span><br>
+            <span class="propriedade">font-weight: </span><span class="valor">bold;</span><br><span class="propriedade">margin-top: </span><span class="valor">10px;</span><br><span class="chave"></span><br><span class="seletor">dl.faq dd </span><span class="chave"></span><br><span class="propriedade">margin-left: </span><span class="valor">20px;</span><br><span class="propriedade">margin-botton: </span><span class="valor">10px;</span><br><span class="chave"></span>
+            <p>O FAQ fica mais legível, com espaçãmento apropriado entre as perguntas e respostas</p>
+            <hr>
+            <h2>Dicas Extras</h2>
+            <ul>
+                <li>Listas podem conter outros elementos HTML em seus itens, inclusive imagens, parágrafos ou outras listas aninhasdas, expandindo bastante as possibilidade estruturais.</li>
+                <li>Listas são largamente empregadas em menus, sumãrios, tabelas de contato, rankings, checklists, timelines, FAQs, blocos de especificações, entre outros.</li>
+                <li>Ao analisar listas, cuidade para não criar níveis muito profindos, pois isso pode dificultar a navegação e a compreensão para usuários com deficiência visual</li>
+            </ul>
+        </div>
+        <hr>
+        <h2>Conclusão</h2>
+        <p>Dominar as listas em HTML é fundamental para estruturar páginas web claras, acessíveis e profissionais. Não se trata apenas de exibir “bullets” ou números, mas de transmitir à máquina — e ao usuário — o significado real de cada agrupamento de itens, seguindo os princípios do <b>HTML semântico</b>. Ao usar as tags corretas (<span class="tag">&lt;ul&gt;</span>, <span class="tag">&lt;ol&gt;</span>, <span class="tag">&lt;dl&gt;</span>, <span class="tag">&lt;li&gt;</span><span class="tag">&lt;dl&gt;</span>, <span class="tag">&lt;dd&gt;</span>) e aplicar estilização apropriada com CSS, você garante tanto uma apresentação visual atraente quanto uma navegação acessível.</p>
+        <p>Adotando boas práticas, seu código será mais facilmente compreendido, mantido, indexado e utilizado por todos — inclusive usuários de leitores de tela e buscadores. Ao escolher conscientemente entre listas ordenadas, não ordenadas e de definição, e compreender seu papel semântico, você dará um passo importante para se tornar um desenvolvedor web mais completo.</p>
+
+        <a href="listas-de-definicao-HTML.html" class="esquerda">Anterior</a>
+        <a href="Elementos-de-bloco-e-de-inline.html" class="direita">Próximo</a>
+</body>
+</html>
