@@ -1,11 +1,114 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    
+    <link rel="shortcut icon" href="../imagens do tutorial/ico/" type="image/x-icon">
+    <style>
+        a {
+            color: chartreuse;
+        }
+        a:hover{
+            color: lightblue;
+        }
+        a:visited {
+            color: lightgreen;
+        }
+        li::marker {
+            content: none;
+        }
+        li>span {
+            border-spacing: 5px;
+        }
+        body {
+            color: whitesmoke;
+            background-color: rgb(0, 0, 0);
+        }
+        header>h1 {
+            color: aqua;
+        }
+        section>h1 {
+            color: aliceblue;
+        }
+        p {
+            color: whitesmoke;
+        }
+        .inline {
+            display: inline-block;
+            border: 1px solid white;
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introdução ao terminal</title>
 </head>
 <body>
-    <h1><strong>Primeiramente, eu apenas traduzi para português o que apareceu no meu terminal</strong></h1>
+    <section>
+        <header><h1><strong>Primeiramente, eu apenas traduzi para português, e organizei do meu jeito o que apareceu no meu terminal</strong></h1>
+            <ul class="lista-Inline">
+                <li><a href="#Arquivamento">Arquivamento</a></li>
+                <li><a href="#Basicos">Básicos</a></li>
+            </ul>
+        </header>
+    </section>
+    <section>
+        <h1>Introdução</h1>
+        <p>
+            <span class="inline">Arquivo: dir (diretório), </span><span class="inline">Node: topo, </span><span class="inline">Esse é o topo da árvore INFO.</span>
+            <p>Esse é o menu principal do Info.<br>Alguns comandos de informações úteis:</br></p>
+            <ul>
+                <li><span>'q'</span> sai;</li>
+                <li><span>'H'</span> lista todos os comandos do Info;</li>
+                <li><span>'h'</span> começa o tutorial Info;</li>
+                <li><span>'mTextinfo RET' visita o manual Textinfo, etc. </li>
+            </ul>
+        </p>
+    </section>
+    <p>* Menu:</p>
+    <section id="Arquivamento">
+        <h2>Arquivamento</h2>
+        <ul>
+            <li>
+                <a href="Xorrecord.html">* Xorrecord:</a>
+                <ol>
+                    <li>Emula o programa de CD/DVD/BD cdrecord</li>
+                </ol>
+            </li>
+            <li>
+                <a href="Xorriso.html">* Xorriso:</a>
+                <ol>
+                    <li>Grava ISO 9660 em CD, DVD, BD.</li>
+                </ol>
+            </li>
+            <li>
+                <a href="Xorrisofs.html">* Xorrisofs:</a>
+                <ol>
+                    <li>Emula o programa de ISOs 9660 mksofs.</li>
+                </ol>
+            </li>
+        </ul>
+    </section>
+    <section id="Basicos">
+        <h2>Básicos</h2>
+        <ul>
+            <li>
+                <a href="Opcoes-comuns.html">* Opções Comuns:</a>
+                <ol>
+                    <li>(coreutils) Opções comuns</li>
+                </ol>
+            </li>
+            <li>
+                <a href="Coreutils.html">* Coreutils:</a>
+                <ol>
+                    <li>Utilitários do GNU core (arquivo, texto, shell)</li>
+                </ol>
+            </li>
+            <li>
+                <a href="formatos-de-entrada-de-data.html">* Formatos de entrada de data:</a>
+                <ol>
+                    <li></li>
+                </ol>
+            </li>
+        </ul>
+    </section>
 </body>
 </html>
