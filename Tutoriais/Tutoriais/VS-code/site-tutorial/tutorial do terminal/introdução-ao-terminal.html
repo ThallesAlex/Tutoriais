@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    
+    <meta name="keywords" content="terminal, tutorial, comandos, tradução">
     <link rel="shortcut icon" href="../imagens do tutorial/ico/" type="image/x-icon">
     <style>
+        *.bold {
+            text-decoration: underline white;
+            font-weight: bold;
+        }
+        span.leigos {
+            font-weight: 1000;
+        }
         a {
             color: chartreuse;
         }
@@ -36,6 +43,10 @@
             display: inline-block;
             border: 1px solid white;
         }
+        abbr {
+            color: cyan;
+            text-decoration: underline darkcyan;
+        }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,7 +54,11 @@
 </head>
 <body>
     <section>
-        <header><h1><strong>Primeiramente, eu apenas traduzi para português, e organizei do meu jeito o que apareceu no meu terminal</strong></h1>
+        <header>
+            <h1><strong>Tradução do conteúdo do terminal</strong></h1>
+                <p><em>Este conteúdo é uma tradução adaptada da documentação exibida via comando <code>info</code> no terminal Linux. O texto original está disponível sob a licença <a href="https://www.gnu.org/licenses/fdl-1.3.html" target="_blank">GNU Free Documentation License</a>, conforme publicado pela Free Software Foundation.</em></p>
+                <p>Esta tradução tem fins exclusivamente educacionais e não substitui a versão oficial. Créditos ao projeto original e aos autores da documentação.</p>
+                <em>eu resumi algumas coisas, e em outras coisas usei IA para ter um detalhamento mais legível para <span class="leigos" title="LEIGOS">certas pessoas</span></em>
             <ul class="lista-Inline">
                 <li><a href="#Arquivamento">Arquivamento</a></li>
                 <li><a href="#Basicos">Básicos</a></li>
@@ -68,19 +83,19 @@
         <h2>Arquivamento</h2>
         <ul>
             <li>
-                <a href="Xorrecord.html">* Xorrecord:</a>
+                <a href="Xorrecord.html">Xorrecord:</a>
                 <ol>
-                    <li>Emula o programa de CD/DVD/BD cdrecord</li>
+                    <li>Emula o programa de CD/DVD/BD cdrecord.</li>
                 </ol>
             </li>
             <li>
-                <a href="Xorriso.html">* Xorriso:</a>
+                <a href="Xorriso.html">Xorriso:</a>
                 <ol>
                     <li>Grava ISO 9660 em CD, DVD, BD.</li>
                 </ol>
             </li>
             <li>
-                <a href="Xorrisofs.html">* Xorrisofs:</a>
+                <a href="Xorrisofs.html">Xorrisofs:</a>
                 <ol>
                     <li>Emula o programa de ISOs 9660 mksofs.</li>
                 </ol>
@@ -91,20 +106,998 @@
         <h2>Básicos</h2>
         <ul>
             <li>
-                <a href="Opcoes-comuns.html">* Opções Comuns:</a>
+                <a href="Opcoes-comuns.html">Common options:</a>
                 <ol>
-                    <li>(coreutils) Opções comuns</li>
+                    <li>(coreutils) Opções comuns.</li>
                 </ol>
             </li>
             <li>
-                <a href="Coreutils.html">* Coreutils:</a>
+                <a href="Coreutils.html">Coreutils:</a>
                 <ol>
-                    <li>Utilitários do GNU core (arquivo, texto, shell)</li>
+                    <li>Utilitários do GNU core (arquivo, texto, shell).</li>
                 </ol>
             </li>
             <li>
-                <a href="formatos-de-entrada-de-data.html">* Formatos de entrada de data:</a>
+                <a href="formatos-de-entrada-de-data.html">Date input formats:</a>
                 <ol>
+                    <li>(coreutils)Formatos de entrada de data.</li>
+                </ol>
+            </li>
+            <li>
+                <a href="Ed.html">* Ed:</a>
+                <ol>
+                    <li>O editor de linha GNU</li>
+                </ol>
+            </li>
+            <li>
+                <a href="permissoes-de-arquivos.html">File permissions:</a>
+                <ol>
+                    <li>(coreutils)Permissões de arquivos. <br>
+                    Modos de acesso.</li>
+                </ol>
+            </li>
+            <li>
+                <a href="localizar-arquivos.html">Finding files:</a>
+                <ol>
+                    <li>(find) Operando em arquivos que correspondem a determinados critérios.</li>
+                </ol>
+            </li>
+            <li>
+                <a href="Time.html">Time:</a>
+                <ol>
+                    <li>(time) Tempo/Hora.</li>
+                </ol>
+            </li>
+        </ul>
+    </section>
+    <section id="compressao">
+        <h2>Compressão</h2>
+        <ul>
+            <li>
+                <a href="Gzip.html">Gzip:</a>
+                <ol>
+                    <li>(gzip) (Des)compressão geral de arquivos (lzw).</li>
+                </ol>
+            </li>
+        </ul>
+    </section>
+    <section id="Desenvolvimento">
+        <h2>Desenvolvimento</h2>
+        <ul>
+            <li>
+                <a href="ssip.html">SSIP:</a>
+                <ol>
+                    <li><abbr title="Speech Synthesis Interface Protocol">(ssip)</abbr> Protocolo de Interface de Síntese de Fala</li>
+                </ol>
+            </li>
+            <li>
+                <a href="Speech-Dispacher.html">Speech Dispacher:</a>
+                <ol>
+                    <li>(Speech-Dispacher) Despachante de fala</li>
+                </ol>
+            </li>
+        </ul>
+    </section>
+    <section id="Editores">
+        <h2>Editores</h2>
+        <ul>
+            <li>
+                <a href="nano.html"> Nano: </a>
+                <ol>
+                    <li>(nano) Pequeno e amigável editor de texto</li>
+                </ol>
+            </li>
+        </ul>
+    </section>
+    <section id="GNUOrganization">
+        <h2>Organização GNU</h2>
+        <ul>
+            <li>
+                <a href="maintainig-findutils.html">Maintainig Findutils: </a>
+                <ol>
+                    <li>(find-maint) Manutenção do GNU findutils</li>
+                </ol>
+            </li>
+        </ul>
+    </section>
+    <section id="cvsPackages">
+        <h2>Pacotes GNU</h2>
+        <ul>
+            <li>
+                <a href="cvs.html">CVS: </a>
+                <ol>(cvs) Sistema de versões concorrentes</ol>
+            </li>
+        </ul>
+    </section>
+    <section id="utilitariosGNU">
+        <h2>Utilitários GNU</h2>
+        <ul>
+            <li>
+                <a href="dirmngr-client.html">Dirmngr-client: </a>
+                <ol>
+                    <li>(gnupg) Cliente X.509 CRL e OCSP </li>
+                </ol>
+            </li>
+            <li>
+                <a href="dirmngr.html">Dirmngr: </a>
+                <ol>
+                    <li>(gnupg) Servidor X.509 CRL e OCSP.</li>
+                </ol>
+            </li>
+            <li>
+                <a href="gpg-agent.html">GPG-agent: </a>
+                <ol>
+                    <li>(gnupg) O daemon de chave secreta</li>
+                </ol>
+            </li>
+            <li>
+                <a href="gpg2.html">GPG2: </a>
+                <ol>
+                    <li>(gnupg) Ferramenta de criptografia e assinatura OpenPGP</li>
+                </ol>
+            </li>
+            <li>
+                <a href="gpgsm.html">GPGSM: </a>
+                <ol>
+                    <li>(gnupg) Ferramenta de criptografia e assinatura S/MIME.</li>
+                </ol>
+            </li>
+        </ul>
+    </section>
+    <section id="utilitariosIdviduais">
+        <h2>Utilitários individuais</h2>
+        <ul>
+            <li>
+                <a href="arch.html">Arch: </a>
+                <ol>
+                    <li>(coreutils) Invocação Arch </li>
+                    <li>Imprime o nome de hardware da máquina.</li>
+                </ol>
+            </li>
+            <li>
+                <a href="b2sum.html">B2sum: </a>
+                <ol>
+                    <li>(coreutils) Invocação B2sum</li>
+                    <li>Imprime ou checa/verifica resumos BLAKE2</li>
+                </ol>
+            </li>
+            <li>
+                <a href="base32.html">Base32: </a>
+                <ol>
+                    <li>(coreutils) Invocação Base32</li>
+                    <li>De/Codifica dados em Base 32</li>
+                </ol>
+            </li>
+            <li>
+                <a href="base64.html">Base64: </a>
+                <ol>
+                    <li>(coreutils) Invocação Base64</li>
+                    <li>De/Codifica dados em base 64</li>
+                </ol>
+            </li>
+            <li>
+                <a href="basename.html">Basename:</a>
+                <ol>
+                    <li>(coreutils) Invocação Basename</li>
+                    <li>Remove diretório e sufixo</li>
+                </ol>
+            </li>
+            <li>
+                <a href="basenc.html">Basenc:</a>
+                <ol>
+                    <li>(coreutils) Invocação Basenc</li>
+                    <li>De/Codificação de dados</li>
+                </ol>
+            </li>
+            <li>
+                <a href="cat.html">Cat: </a>
+                <ol>
+                    <li>(coreutils) Invocação do cat</li>
+                    <li>Contatena e grava arquivos</li>
+                </ol>
+            </li>
+            <li>
+                <a href="chcon.html">Chcon:</a>
+                <ol>
+                    <li>(coreutils) Invocação do chcon</li>
+                    <li>Altera o CTX SE Linux dos arquivos</li>
+                </ol>
+            </li>
+            <li>
+                <a href="chgrp.html">Chgrp:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Chgrp</li>
+                    <li>Altera os grupos de arquivos</li>
+                </ol>
+            </li>
+            <li>
+                <a href="chmod.html">Chmod:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Chmod</li>
+                    <li>Altera as permissões de acesso</li>
+                </ol>
+            </li>
+            <li>
+                <a href="chown.html">Chown: </a>
+                <ol>
+                    <li>(coreutils) Invocação do Chown</li>
+                    <li>Altera os proprietários e grupos dos arquivos</li>
+                </ol>
+            </li>
+            <li>
+                <a href="chroot.html">Chroot:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Chroot</li>
+                    <li>Especifica o diretório raiz</li>
+                </ol>
+            </li>
+            <li>
+                <a href="cksum.html">Cksum:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Cksum</li>
+                    <li>Imprime o checksum CRC POSIX</li>
+                </ol>
+            </li>
+            <li>
+                <a href="cmp.html">Cmp:</a>
+                <ol>
+                    <li>(diffutils) Invocação do Cmp</li>
+                    <li>Compara dois arquivos byte a byte</li>
+                </ol>
+            </li>
+            <li>
+                <a href="comm.html">Comm:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Comm</li>
+                    <li>Compara arquivos ordenados linha por linha</li>
+                </ol>
+            </li>
+            <li>
+                <a href="cp.html">Cp:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Cp</li>
+                    <li>Copia arquivos</li>
+                </ol>
+            </li>
+            <li>
+                <a href="csplit.html">Csplit:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Csplit</li>
+                    <li>Divide por contexto</li>
+                </ol>
+            </li>
+            <li>
+                <a href="cut.html">Cut:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Cut</li>
+                    <li>Imprime partes selecionadas das linhas</li>
+                </ol>
+            </li>
+            <li>
+                <a href="cvs2.html">Cvs:</a>
+                <ol>
+                    <li>(cvs) Lista de comando do CVS</li>
+                    <li>Sistema de versões concorrentes</li>
+                </ol>
+            </li>
+            <li>
+                <a href="date.html">Date:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Date</li>
+                    <li>Imprime/Define a hora e a data do sistema</li>
+                </ol>
+            </li>
+            <li>
+                <a href="dd.html">Dd:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Dd</li>
+                    <li>Copia e Converte um arquivo</li>
+                </ol>
+            </li>
+            <li>
+                <a href="df.html">Df:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Df</li>
+                    <li>Relata o uso do sistema de arquivos</li>
+                </ol>
+            </li>
+            <li>
+                <a href="diff3.html">Diff3:</a>
+                <ol>
+                    <li>(Diffutils) Invocação Diff3</li>
+                    <li>Compara 3 arquivos linha por linha</li>
+                </ol>
+            </li>
+            <li>
+                <a href="diff.html">Diff:</a>
+                <ol>
+                    <li>(diffutils) Invocação do Diff</li>
+                    <li>Compara 2 arquivos linha por linha</li>
+                </ol>
+            </li>
+            <li>
+                <a href="dir.html">Dir:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Dir</li>
+                    <li>Lista diretórios brevemente</li>
+                </ol>
+            </li>
+            <li>
+                <a href="dircolors.html">Dircolors:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Dircolors</li>
+                    <li>Define cor para o comando ls</li>
+                </ol>
+            </li>
+            <li>
+                <a href="dirname.html">Dirname:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Dirname</li>
+                    <li>Remove o último componente do nome do arquivo</li>
+                </ol>
+            </li>
+            <li>
+                <a href="du.html">Du:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Du</li>
+                    <li>Relata o uso do arquivo</li>
+                </ol>
+            </li>
+            <li>
+                <a href="echo.html">Echo:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Echo</li>
+                    <li>Imprime uma linha de texto</li>
+                </ol>
+            </li>
+            <li>
+                <a href="env.html">Env:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Env</li>
+                    <li>Modifica o ambiente</li>
+                </ol>
+            </li>
+            <li>
+                <a href="expand.html">Expand:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Expand</li>
+                    <li>Converte tabs em espaços</li>
+                </ol>
+            </li>
+            <li>
+                <a href="expr.html">Expr:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Expr</li>
+                    <li>Avalia expressões</li>
+                </ol>
+            </li>
+            <li>
+                <a href="factor.html">Factor:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Factor</li>
+                    <li>Imprime os fatores primos</li>
+                </ol>
+            </li>
+            <li>
+                <a href="false.html">False:</a>
+                <ol>
+                    <li>(coreutils) Invocação do False</li>
+                    <li><span class="bold" title="digo nada">Não faz nada, sem sucesso</span></li>
+                </ol>
+            </li>
+            <li>
+                <a href="find.html">Find:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Find</li>
+                    <li>Encontra e processa arquivos</li>
+                </ol>
+            </li>
+            <li>
+                <a href="fmt.html">Fmt:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Fmt</li>
+                    <li>Reformata o texto do parágrafo</li>
+                </ol>
+            </li>
+            <li>
+                <a href="fold.html">Fold:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Fold</li>
+                    <li>Quebra linhas de entrada grande</li>
+                </ol>
+            </li>
+            <li>
+                <a href="groups">Groups:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Groups</li>
+                    <li>Imprime os nome dos grupos aos quais um usuário pertence</li>
+                </ol>
+            </li>
+            <li>
+                <a href="gunzip.html">Gunzip:</a>
+                <ol>
+                    <li>(gzip) Visão geral</li>
+                    <li>Descompressão</li>
+                </ol>
+            </li>
+            <li>
+                <a href="gzexe"></a>
+                <ol>
+                    <li>(gzip) Visão geral</li>
+                    <li>Comprime executáveis</li>
+                </ol>
+            </li>
+            <li>
+                <a href="head.html">Head:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Head</li>
+                    <li>Exibe a primeira parte dos arquivos</li>
+                </ol>
+            </li>
+            <li>
+                <a href="hostid.html">Hostid:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Hostid</li>
+                    <li>Imprime o identificador numérico do host</li>
+                </ol>
+            </li>
+            <li>
+                <a href="hostname.html">Hostname:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Hostname</li>
+                    <li>Imprime ou define o nome do sistema</li>
+                </ol>
+            </li>
+            <li>
+                <a href="id.html">Id:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Id:</li>
+                    <li>Imprime a identidade o usuário</li>
+                </ol>
+            </li>
+            <li>
+                <a href="install.html">Install:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Install</li>
+                    <li>Copia arquivos e define atributos</li>
+                </ol>
+            </li>
+            <li>
+                <a href="join.html">Join:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Join</li>
+                    <li>Une linhas em um campo comum</li>
+                </ol>
+            </li>
+            <li>
+                <a href="kill.html">Kill:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Kill</li>
+                    <li>Envia um para os processos</li>
+                </ol>
+            </li>
+            <li>
+                <a href="link.html">Link:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Link</li>
+                    <li>Cria links físicos entre os arquivos</li>
+                </ol>
+            </li>
+            <li>
+                <a href="ln.html">Ln:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Ln</li>
+                    <li>Cria links entre os arquivos</li>
+                </ol>
+            </li>
+            <li>
+                <a href="locate.html">Locate:</a>
+                <ol>
+                    <li>(find) Invocação de Locate </li>
+                    <li>Encontra arquivos em um banco de dados</li>
+                </ol>
+            </li>
+            <li>
+                <a href="logname.html">Logname:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Logname</li>
+                    <li>Imprime o nome de login atual</li>
+                </ol>
+            </li>
+            <li>
+                <a href="ls.html">Ls:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Ls</li>
+                    <li>Lista o conteúdo do diretório</li>
+                </ol>
+            </li>
+            <li>
+                <a href="md5sum.html">Md5sum:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Md5sum</li>
+                    <li>Umprime ou verifica os resumos MD5</li>
+                </ol>
+            </li>
+            <li>
+                <a href="mkdir.html">Mkdir:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Mkdir</li>
+                    <li>Cria diretórios</li>
+                </ol>
+            </li>
+            <li>
+                <a href="mkfifo.html">Mkinfo:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Mkfifo</li>
+                    <li>Cria FiFos (pipes nomeados)</li>
+                </ol>
+            </li>
+            <li>
+                <a href="mknod.html">Mknod:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Mknod</li>
+                    <li>Cria arquivos especiais</li>
+                </ol>
+            </li>
+            <li>
+                <a href="mktemp.html">Mktemp:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Mktemp</li>
+                    <li>Cria arquivos temporários</li>
+                </ol>
+            </li>
+            <li>
+                <a href="mv.html">Mv:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Mv</li>
+                    <li>Renomeia arquivos</li>
+                </ol>
+            </li>
+            <li>
+                <a href="nice.html">Nice:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Nice</li>
+                    <li>Modifica a prioridade de processamento (necesses)</li>
+                </ol>
+            </li>
+            <li>
+                <a href="nl.html">Nl:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Nl</li>
+                    <li>Numera linhas e escreve arquivos</li>
+                </ol>
+            </li>
+            <li>
+                <a href="nohup.html">Nohup:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Nohup</li>
+                    <li>Imuniza contra travamentos</li>
+                </ol>
+            </li>
+            <li>
+                <a href="nproc.html">Nproc:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Nproc</li>
+                    <li>Imprime o número de processadores</li>
+                </ol>
+            </li>
+            <li>
+                <a href="numfmt.html">Numfmt:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Numfmt</li>
+                    <li>Reformata números</li>
+                </ol>
+            </li>
+            <li>
+                <a href="od.html">Od:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Od</li>
+                    <li>Gera arquivos em octal, etc</li>
+                </ol>
+            </li>
+            <li>
+                <a href="paste.html">Paste:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Paste</li>
+                    <li>Mescla linhas de arquivos</li>
+                </ol>
+            </li>
+            <li>
+                <a href="patch.html">Patch:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Patch</li>
+                    <li>Aplica um patch a um arquivo</li>
+                </ol>
+            </li>
+            <li>
+                <a href="pathchk.html">Pathchk:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Pathchk</li>
+                    <li>Verifica a portabilidade do nome do arquivo</li>
+                </ol>
+            </li>
+            <li>
+                <a href="pr.html">Pr:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Pr</li>
+                    <li>Paginar ou organizar arquivos em colunas</li>
+                </ol>
+            </li>
+            <li>
+                <a href="printenv.html">Printenv:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Printenv</li>
+                    <li>Imprime variáveis de ambiente</li>
+                </ol>
+            </li>
+            <li>
+                <a href="printf.html">Printf:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Printf</li>
+                    <li>Formata e imprime dados</li>
+                </ol>
+            </li>
+            <li>
+                <a href="ptx.html">Ptx:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Ptx</li>
+                    <li>Produção de índices permutados</li>
+                </ol>
+            </li>
+            <li>
+                <a href="pwd.html">Pwd:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Pwd</li>
+                    <li>Imprime o diretório de trabalho(o atual)</li>
+                </ol>
+            </li>
+            <li>
+                <a href="readlink.html">Readlink:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Readlink</li>
+                    <li>Imprimir referente de um link simbólico</li>
+                </ol>
+            </li>
+            <li>
+                <a href="realpath.html">Realpath:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Realpath</li>
+                    <li>Imprime nome de arquivos resolvidos</li>
+                </ol>
+            </li>
+            <li>
+                <a href="rm.html">Rm:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Rm</li>
+                    <li>Remove arquivos</li>
+                </ol>
+            </li>
+            <li>
+                <a href="rmdir.html">Rmdir:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Rmdir</li>
+                    <li>Remove diretórios vazios</li>
+                </ol>
+            </li>
+            <li>
+                <a href="runcon.html">Runcon:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Runcon</li>
+                    <li>Execute no SELinux CTX especificado</li>
+                </ol>
+            </li>
+            <li>
+                <a href="sdiff.html">Sdiff:</a>
+                <ol>
+                    <li>(diffutils) Invocação do Sdiff</li>
+                    <li>Combina 2 arquivos lado a lado</li>
+                </ol>
+            </li>
+            <li>
+                <a href="seq.html">Seq:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Seq</li>
+                    <li>Imprime sequências numéricas</li>
+                </ol>
+            </li>
+            <li>
+                <a href="shalsum.html">Shalsum:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Shalsum</li>
+                    <li>Imprime ou verifica resumos SHA-1</li>
+                </ol>
+            </li>
+            <li>
+                <a href="sha2.html">Sha2:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Sha2</li>
+                    <li>Imprime ou verifica resumos SHA-2</li>
+                </ol>
+            </li>
+            <li>
+                <a href="shred.html">Shred:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Shred</li>
+                    <li>Remova arquivos com mais segurança</li>
+                </ol>
+            </li>
+            <li>
+                <a href="shuf.html">Shuf:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Shuf</li>
+                    <li>Embaralhamento de arquivos de texto</li>
+                </ol>
+            </li>
+            <li>
+                <a href="sleep.html">Sleep:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Sleep</li>
+                    <li>Atraso por um tempo determinado</li>
+                </ol>
+            </li>
+            <li>
+                <a href="sort.html">Sort:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Sort</li>
+                    <li>Classifique arquivos de texto</li>
+                </ol>
+            </li>
+            <li>
+                <a href="split.html">Split:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Split</li>
+                    <li>Divida em pedaços</li>
+                </ol>
+            </li>
+            <li>
+                <a href="stat.html">Stat:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Stat</li>
+                    <li>Relata status do arquivo (sistema)</li>
+                </ol>
+            </li>
+            <li>
+                <a href="stdbuf.html">Stdbuf:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Stdbuf</li>
+                    <li>Modifica o buffer stdio</li>
+                </ol>
+            </li>
+            <li>
+                <a href="stty.html">Stty:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Stty</li>
+                    <li>Imprime/Altera configurações do terminal</li>
+                </ol>
+            </li>
+            <li>
+                <a href="sum.html"><span class="bold" title="praise the sun">Sum</span>:</a>
+                <ol>
+                    <li>(coreutils) Invocação do <span class="bold" title="praise the sun">Sun</span></li>
+                    <li>Imprime a some de verificação tradicional</li>
+                </ol>
+            </li>
+            <li>
+                <a href="sync.html">Sync:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Sync</li>
+                    <li>Sincronize arquivos para armazenamento estável</li>
+                </ol>
+            </li>
+            <li>
+                <a href="tac.html"><span class="bold" title="Tic">Tac</span></a>
+                <ol>
+                    <li>(coreutils) Invocação do <span class="bold" title="Tic">Tac</span></li>
+                    <li>Arquivos reversos</li>
+                </ol>
+            </li>
+            <li>
+                <a href="tail.html">Tail:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Tail</li>
+                    <li>Produza a última parte dos arquivos</li>
+                </ol>
+            </li>
+            <li>
+                <a href="tee.html">Tee:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Tee</li>
+                    <li>Redirecionar para múltiplos arquivos</li>
+                </ol>
+            </li>
+            <li>
+                <a href="test.html">Test:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Test</li>
+                    <li>Teste de arquivos/strings </li>
+                </ol>
+            </li>
+            <li>
+                <a href="timeout.html">Timeout:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Timeout</li>
+                    <li>Corra com limite de tempo</li>
+                </ol>
+            </li>
+            <li>
+                <a href="touch.html">Touch:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Touch</li>
+                    <li>Altera os carimbos de data/hora do arquivo</li>
+                </ol>
+            </li>
+            <li>
+                <a href="tr.html">Tr:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Tr</li>
+                    <li>Traduzir caracteres</li>
+                </ol>
+            </li>
+            <li>
+                <a href="true.html">True:</a>
+                <ol>
+                    <li>(coreutils) Invocação do True</li>
+                    <li><span class="bold" title="pra que 2 comandos que não fazem nada?">Não faça nada, com sucesso</span></li>
+                </ol>
+            </li>
+            <li>
+                <a href="truncate.html">Truncate:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Truncate</li>
+                    <li>Diminuir/Ampliar o tamanho de um arquivo</li>
+                </ol>
+            </li>
+            <li>
+                <a href="tsort.html">Tsort:</a>
+                <ol>
+                    <li>(coreutils) Invocação do Tsort</li>
+                    <li>Classificação topológica</li>
+                </ol>
+            </li>
+            <li>
+                <a href="tty.html">Tty:</a>
+                <ol>
+                    <li> (coreutils) Invocação do Tty</li>
+                    <li>Imprima o nome do terminal</li>
+                </ol>
+            </li>
+            <li>
+                <a href="uname.html">Uname:</a>
+                <ol>
+                    <li> (coreutils) Invocação do Uname</li>
+                    <li>Imprime informações do sistema</li>
+                </ol>
+            </li>
+            <li>
+                <a href=""></a>
+                <ol>
+                    <li> (coreutils) Invocação do</li>
+                    <li></li>
+                </ol>
+            </li>
+            <li>
+                <a href=""></a>
+                <ol>
+                    <li> (coreutils) Invocação do</li>
+                    <li></li>
+                </ol>
+            </li>
+            <li>
+                <a href=""></a>
+                <ol>
+                    <li> (coreutils) Invocação do</li>
+                    <li></li>
+                </ol>
+            </li>
+            <li>
+                <a href=""></a>
+                <ol>
+                    <li> (coreutils) Invocação do</li>
+                    <li></li>
+                </ol>
+            </li>
+            <li>
+                <a href=""></a>
+                <ol>
+                    <li> (coreutils) Invocação do</li>
+                    <li></li>
+                </ol>
+            </li>
+            <li>
+                <a href=""></a>
+                <ol>
+                    <li> (coreutils) Invocação do</li>
+                    <li></li>
+                </ol>
+            </li>
+            <li>
+                <a href=""></a>
+                <ol>
+                    <li> (coreutils) Invocação do</li>
+                    <li></li>
+                </ol>
+            </li>
+            <li>
+                <a href=""></a>
+                <ol>
+                    <li> (coreutils) Invocação do</li>
+                    <li></li>
+                </ol>
+            </li>
+            <li>
+                <a href=""></a>
+                <ol>
+                    <li> (coreutils) Invocação do</li>
+                    <li></li>
+                </ol>
+            </li>
+            <li>
+                <a href=""></a>
+                <ol>
+                    <li> (coreutils) Invocação do</li>
+                    <li></li>
+                </ol>
+            </li>
+            <li>
+                <a href=""></a>
+                <ol>
+                    <li> (coreutils) Invocação do</li>
+                    <li></li>
+                </ol>
+            </li>
+            <li>
+                <a href=""></a>
+                <ol>
+                    <li> (coreutils) Invocação do</li>
+                    <li></li>
+                </ol>
+            </li>
+            <li>
+                <a href=""></a>
+                <ol>
+                    <li> (coreutils) Invocação do</li>
+                    <li></li>
+                </ol>
+            </li>
+            <li>
+                <a href=""></a>
+                <ol>
+                    <li> (coreutils) Invocação do</li>
+                    <li></li>
+                </ol>
+            </li>
+            <li>
+                <a href=""></a>
+                <ol>
+                    <li> (coreutils) Invocação do</li>
+                    <li></li>
+                </ol>
+            </li>
+            <li>
+                <a href=""></a>
+                <ol>
+                    <li> (coreutils) Invocação do</li>
+                    <li></li>
+                </ol>
+            </li>
+            <li>
+                <a href=""></a>
+                <ol>
+                    <li> (coreutils) Invocação do</li>
+                    <li></li>
+                </ol>
+            </li>
+            <li>
+                <a href=""></a>
+                <ol>
+                    <li> (coreutils) Invocação do</li>
+                    <li></li>
+                </ol>
+            </li>
+            <li>
+                <a href=""></a>
+                <ol>
+                    <li> (coreutils) Invocação do</li>
                     <li></li>
                 </ol>
             </li>
