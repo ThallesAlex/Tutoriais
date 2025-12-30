@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <style>
+        #imgOracle {
+            width: 10%;
+            height: 10%;
+        }
+    </style>
+    <link rel="shortcut icon" href="../imagens-do-tutorial/ico/favicon cruz.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css-do-tutorial.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução em Java</title>
+</head>
+
+<body>
+    <section id="Introdução-java">
+        <h1>Introdução à programação em Java</h1>
+
+        <ul>
+            <li>Java é uma linguagem de programação de alto nível, orientada a objetos, criada em 1995 pela Sun
+                MicroSystens(agora propriedade da Oracle), que permite desenvolver aplicações versáteis em diversas
+                plataformas.</li>
+            <li>É amplamente usada em aplicações mobile (principalmente Android), Web, desktop e sistemas empresáriais
+                com mais de 3bilhões de dispositivos rodando Java.</li>
+            <li>Para iniciantes Java é acessível devido à sua sintaxe simples e comunidade vasta, mas requer prática
+                para dominar conceitos como orientação a objetos.</li>
+            <li>Começe instalando o JDK (Java Development Kit) e uma IDE como Intellij IDEA ou Eclipse para facilitar o
+                desenvolvimento.</li>
+            <li>Um programa básico em Java imprime "Hello, World" usando o método main e System.out.println</li>
+        </ul>
+        <img src="../imagens-do-tutorial/imagens-do-java/Captura de tela de 2025-12-28 12-05-03.png"
+            alt="Um programa que exibirá ola, mundo">
+        <p>Resultado:</p>
+        <img src="../imagens-do-tutorial/imagens-do-java/Captura de tela de 2025-12-28 12-05-44.png" alt="O Resultado">
+    </section>
+    <section id="Por-que-Java">
+        <h2>Por que aprender Java?</h2>
+
+        <p>Java é uma das linguagens da mais populares no mercado de trabalho, com alta demanda em áreas como
+            desenvolvimento mobile e enterprise. Sua portabilidade (escreva uma vez, execute em qualquer lugar) a torna
+            ideal para projetos cross-plataform.</p>
+    </section>
+    <section id="configuracao-inicial">
+        <h2>Configuração Inicial</h2>
+
+        <p>Baixe o JDK do site oficial da Oracle e configure as variáveis de ambiente para começar a codar. Escolha um
+            IDE para editar e executar código de forma eficiente</p>
+    </section>
+    <section id="conceitos-basicos">
+        <h2>Conceitos Básicos</h2>
+
+        <p>Aprenda a sintaxe fundamental, como declarar variáveis e usar operadores, antes de avançar para tópicos mais
+            complexos como loops e classes</p>
+    </section>
+    <hr>
+    <section id="quase-nada-de-historia">
+        <p>Java é uma linguagem de programação poderosa e versátil que tem sido uma das mais influentes no mundo da
+            tecnologia desde sua criação. Desenvolvida inicialmente pela Sun MicroSystens em 1995 sob o nome de "Oak" e
+            posteriormente renomeada para Java, ela foi projetada para ser simples, segura e portátil. Hoje, pertence à
+            Oracle Coroporation e é usada em uma ampla gama de aplicações, desde apps mobile até sistemas de grande
+            escala em empresas como Netflix, Amazon e Uber. Com mais de 3 bilhões de dispositivos executando Java, sua
+            relevância continua alta, especialmente em ambientes Android e desenvolvimento Web</p>
+        <p>Nesta seção, exploraremos em detalhes o que é java, sua história, características principais, aplicações
+            práticas, como configurar o ambiente de desenvolvimento, sintaxe básica, tipos de dados e recursos
+            recomendados para iniciantes. O foco é fornecer uma visão abrangente, adequada para quem está comecando do
+            zero, incluindo dicas práticas e exemplos de código(vou por algumas prints também). Embora Java não seja
+            controversa em si, vale notar que debates sobre desenpenho versus outras linguagens como Python existem, mas
+            evidências sugerem que Java é robusta para aplicações de alto desenpenho.</p>
+
+        <section id="história-e-evolucao">
+            <h3>História e Evolução do Java</h3>
+
+            <P>Java foi criado por James Gosling e sua equipe na Sun MicroSystens como uma linguagem para dispositivos eletrônicos inteligentes. Lançada publicamente em 1995. sua principal inovação foi a independência de plataforma, graças à JVM (Java Virtual Machine), que permite que o código compilado (bytecode) rode em qualquer sistema com JVM instalada. Em 2010, a Oracle adiquiriu a Sun, continuando o desenvolvimento em performance e sintaxe.</P>
+        </section>
+        <section id="caracteristicas-principais-do-java">
+            <h3>Características Principais do Java</h3>
+
+            <p>Java se destaca  por várias features que a tornam atraente para desenvolvedores:</p>
+            <ul>
+                <li><b>Indepanderncia de Plataforma</b>: "Write Once, Run Anywhere" (WORA) - o código é compilado para bytecode e executado pela JVM em Windows, macOS, Linux, etc:</li>
+                <li><b>Orientação a Objetos:</b>: Suporta conceitos como classes, herança, polimorfismo e encapsulamento para código modular e reutilizável</li>
+                <li><b>Robusta e Segura</b>: Gerenciamento automático de memória(garbage collector) e tratamento de execuções evitam erros comuns.</li>
+                <li><b>Multithreading</b>: Permite execução concorrente de tarefas, ideal para aplicações eficientes</li>
+                <li><b>Rica em Bibliotecas</b>: APIs padrão e frameworks como Spring para desenvolvimento Web</li>
+                <li><b>Comunidade e Suporte</b>: Milhões de desenvolvedores e recursos gratuitos disponíveis.</li>
+            </ul>
+            <p>Aqui está uma tabela comparando características chave de Java com outras linguagens populares para contextualizar:</p>
+
+            <table>
+                <tr>
+                    <th>Características</th>
+                    <th>Java</th>
+                    <th>Python</th>
+                    <th>C++</th>
+                </tr>
+                <tr>
+                    <td>Paradigma Principal</td>
+                    <td>Orientado a Objetos</td>
+                    <td>Multiparadigma</td>
+                    <td>Multiparadigma</td>
+                </tr>
+                <tr>
+                    <td>Independência de Plataforma</td>
+                    <td>Sim (via JVM)</td>
+                    <td>Sim</td>
+                    <td>Não (compilado nativo)</td>
+                </tr>
+                <tr>
+                    <td>Gerenciamento de Memória</td>
+                    <td>Automático (GC)</td>
+                    <td>Automático</td>
+                    <td>Manual</td>
+                </tr>
+                <tr>
+                    <td>Uso Comun</td>
+                    <td>Apps Android, Enterprise</td>
+                    <td>Data Science, Scripts</td>
+                    <td>Jogos, Sistemas</td>
+                </tr>
+                <tr>
+                    <td>Curva de Aprendizado</td>
+                    <td>Moderada</td>
+                    <td>Baixa</td>
+                    <td>Alta</td>
+                </tr>
+
+            </table>
+            <p>Essa tabela destaca por que Java é uma escolha equilibrada para iniciantes interessados em aplicações robustas</p>
+        </section>
+        <section id="aplicações-e-usos-java">
+            <h3>Aplicações e Usos do Java</h3>
+            <p>Java é versátil e usada em:</p>
+            <ul>
+                <li>
+                    <b>Desenvolvimento Mobile:</b>
+                    <p>Principalmente Androide apps via Android Studio</p>
+                </li>
+                <li>
+                    <b>Web e Enterprise: </b>
+                    <p>Frameworks como Spring Boot para servidores e sistemas bancários.</p>
+                </li>
+                <li>
+                    <b>Desktop e Jogos: </b>
+                    <p>Aplicações GUI com JavaFX; jogos como Minecraft</p>
+                </li>
+                <li>
+                    <b>Big Data e IoT: </b>
+                    <p>Ferramentas como Hadoop e aplicações em dispositivos embarcados.</p>
+                </li>
+                <li>
+                    <b>Aplicações Científicas: </b>
+                    <P>Processamento de dados grandes</P>
+                </li>
+            </ul>
+            <p>Empresas como Netflix usam Java para backend escalável, enquanto Uber emprega para gerenciamento de viagens.</p>
+        </section>
+        <section id="configurando-ambiente-de-desenvolvimento">
+            <h3>Comfigurando o Ambiente de Desenvolvimento</h3>
+
+            <p>Para começar, siga estes passos detalhados:</p>
+            <ol>
+                <b>Instale o JDK:</b>
+                <ul>
+                    <li>Acesse o site da Oracle <img src="../imagens-do-tutorial/imagens-do-java/_.jpeg" alt="imagen da Oracle" id="imgOracle">(apenas uma imagen grande) e baixe a versão mais recente (ex: Java 21 ou superior) para seu SO.</li>
+                    <li>No Windows: Execute o instalador e siga as instruções.</li>
+                    <li>No macOS/Linux: Use gerenciadores de pacotes ou instalador</li>
+                </ul>
+                <br>
+                <b>Configure Variáveis de Ambiente:</b>
+                <ul>
+                    <li>Defina JAVA_HOME para o diretório de instalação (ex: C:\Program Files\Java\jdk-21 no Windows).</li>
+                    <li>Adicione o bin ao PATH</li>
+                    <li>Verifique com <span class="underline">java - version </span>no terminal.</li>
+                </ul>
+                <br>
+                <b>Escolha um IDE:</b>
+                <ul>
+                    <li>Recomendado: Intelij IDEA Community (gratuito) </li>
+                    <li>Alternativas: Eclipse ou VS Code com extensões Java.</li>
+                    <li>No Intelij, configure o JDK em Project Structure > SDKs</li>
+                </ul>
+                <br><b>Escreva Seu Primeiro Programa:</b>
+                <p>Crie um arquivo ZaWarudo.java:</p>
+                <div class="exemplo">
+
+                    <p class="comentario">Java</p>
+                    <hr>
+                    <span class="public">public </span><span class="class"> class</span><span class="className"> ZaWarudo </span><span class="chave">{</span><br>
+                    <span class="public">public </span><span class="static">static </span><span class="void">void </span><span class="main">main</span><span class="chave">(</span><span class="string">String</span><span class="chave">[] </span><span class="args">args </span><span class="chave">) {</span><br><span class="systemOut">    System.out.</span><span class="println">println</span><span class="chave">(</span><span class="comando">"Za Wardo!"</span><span class="chave">);</span><br><span class="chave">}</span><br><span class="chave">}</span>
+                </div>
+                <p>Compile com <span class="underline">javac ZaWarudo.java</span> e execute como <span class="underline">java ZaWarudo</span>.</p>
+            </ol>
+            <h3>Sintaxe Básica e Tipos de Dados</h3>
+            <p>A sintaxe de Java é semelhante a C++, sensível a MAIÚSCULAS/minúsculas, e requer ponto-e-vírgula ao final de statements.</p>
+            <ul>
+                <li><span class="b">Método Main: </span>Ponto de entrada: <span class="underline">public static void main(String[] args)...</span></li>
+                <li><span class="b">Impressão: </span><span class="underline">System.out.println("texto");</span></li>
+                <li><span class="b">Variáveis: </span>Declare com tipo, ex: <span class="underline">int numero = 10</span></li>
+                <li><span class="b">Comentários: </span><span class="underline">// Linha única </span>ou <span class="undeline">/*Múltiplas linhas*/</span></li>
+            </ul>
+            <br>
+
+            <p>Tipos de dados primitivos em Java:</p>
+            <table>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Descrição</th>
+                    <th>Tamanho</th>
+                    <th>Exemplo</th>
+                </tr>
+                <tr>
+                    <td>byte</td>
+                    <td>Inteiro pequeno</td>
+                    <td>1 byte</td>
+                    <td>byte b = 100;</td>
+                </tr>
+                <tr>
+                    <td>short</td>
+                    <td>Inteiro curto</td>
+                    <td>2 bytes</td>
+                    <td>shorts s = 1000;</td>
+                </tr>
+                <tr>
+                    <td>int</td>
+                    <td>Inteiro padrão</td>
+                    <td>4 bytes</td>
+                    <td>int i = 10000;</td>
+                </tr>
+                <tr>
+                    <td>long</td>
+                    <td>Inteiro longo</td>
+                    <td>8 bytes</td>
+                    <td>long l = 100000L;</td>
+                </tr>
+                <tr>
+                    <td>float</td>
+                    <td>Ponto flutuante simples</td>
+                    <td>4 bytes</td>
+                    <td>float f = 3.14f;</td>
+                </tr>
+                <tr>
+                    <td>double</td>
+                    <td>Ponto flutuante duplo</td>
+                    <td>8 bytes</td>
+                    <td>double d = 3.14;</td>
+                </tr>
+                <tr>
+                    <td>boolean</td>
+                    <td>Verdadeiro/Falso</td>
+                    <td>1 bit</td>
+                    <td>boolean bool = true;</td>
+                </tr>
+                <tr>
+                    <td>char</td>
+                    <td>Caractere único</td>
+                    <td>2 bytes</td>
+                    <td>char c = 'a';</td>
+                </tr>
+            </table>
+            <p>Objetos como String são não-primitovos: <span class="underline">String texto = "Bury The Light Deep Within";</span></p>
+        </section>
+        
+    </section>
+
+    <a href="ciclo-de-vida-de-um-programa.html">Ciblo de vida de um programa</a>
+</body>
+
+</html>
